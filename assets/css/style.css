@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+/*--------------------------------------------Colors*/
+
+body {
+    font-family: 'Alice', serif;
+    font-weight: 300;
+    background-color: #ffffff;
+    color: black;
+}
+
+h1, h2 {
+   color: red; 
+}
