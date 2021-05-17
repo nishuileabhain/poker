@@ -5,9 +5,10 @@
 body {
     font-family: 'Alice', serif;
     font-weight: 300;
-    background-color: #f8f8ff;
+    background-color: #f2eecb;
     color: black;
     text-align: center;
+    margin: 0;
 
 }
 
@@ -17,6 +18,20 @@ h2, p {
 }
 h1, h2 {
    color: red; 
+}
+
+
+.container {
+    background-color: #333333;
+    padding: 1rem;
+    margin-top: 1rem; /* separates containers from each other*/ 
+}
+
+.draggable {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: move;
 }
 
 .hand {
