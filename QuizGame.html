@@ -3,12 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
     <title>Test Your Knowledge</title>
 </head>
 <body>
+    <div class = "heading">
         <h1>Quiz</h1>
+    </div>
         <p>Now that you are familiar with the poker rankings, test your memory.
         <a href = Rules.html>Click here if you need to go back to the rankings page.</a>
         </p>
+
+		<div class="game-area">
+			<div class="controls-area">
+				<button data-type="easy" class="easy">
+                </button>
+				<button data-type="hard" class="hard">
+                </button>
+
+			</div>
+
+			<div class="question-area">
+				<span id="operand1">0</span>
+				<span id="operator">x</span>
+				<span id="operand2">0</span>
+				<span id="equals">=</span>
+				<p class="answer-message">Enter Answer:</p>
+				<input id="answer-box" name="answer" type="number">
+		</div>
+				<button data-type="submit" class="btn btn--gray">Submit Answer</button>
+			</div>
+			<div class="score-area">
+				<p class="scores">Correct Answers: <span id="score">0</span></p>
+				<p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+			</div>
+
+			<script src="script.js"></script>        
 </body>
 </html>
