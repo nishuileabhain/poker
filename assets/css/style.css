@@ -47,7 +47,10 @@ header {
 }
 
 
+.hand img{
+    max-width: 20%;
 
+}
 
 .navbar {
     float: left;
@@ -65,7 +68,6 @@ ul li{
     text-decoration: none;
     color:white;
 }
-
 
 
 .navbar {
@@ -114,5 +116,3 @@ footer li {
     width: 32px;
     height: 32px;
 }
-
-*/
