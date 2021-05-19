@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 
-/*--------------------------------------------Colors*/
-
 body {
     font-family: 'Alice', serif;
     font-weight: 300;
@@ -18,8 +16,12 @@ h2, p {
 }
 h1, h2 {
    color: red; 
+    letter-spacing: 5px;
 }
 
+header {
+    margin: 0px;
+}
 
 .container {
     background-color: #333333;
@@ -43,3 +45,81 @@ h1, h2 {
     height: 40px;
     padding-right: 5px;
 }
+
+
+
+
+.navbar {
+    float: left;
+    font-size: 300;
+    color: blue; 
+    text-decoration: none;
+}
+
+ul li{
+        list-style-type: none; /*no bullet points anywhere*/
+}
+
+
+ a {
+    text-decoration: none;
+    color:white;
+}
+
+ a:hover {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 3px solid red;
+    border-top: 3px solid red;
+}
+
+
+
+.navbar {
+color: inherit;
+background-color:inherit;
+font-family: 'Alice', serif;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid red;
+    border-top: 3px solid red;
+}
+
+.active {
+    border-bottom: 3px solid red;
+}
+/*
+#cover-text {
+    font-size: 130%;
+}
+
+#cover-text, cover-text h2 {
+    color:#555555;
+}
+.bglogo {
+    background: url("../images/bghike.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 300px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;     
+}*/
+
+    /*footer part*/
+footer li {
+    text-decoration: none;
+    list-style-type: none;
+    letter-spacing: 4px;
+    float: right;
+    margin-right: 30px;
+    width: 32px;
+    height: 32px;
+}
+
+*/
