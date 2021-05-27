@@ -4,21 +4,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Drag & drop quiz component with SortableJS</title>
+    <title>Poker Hand Quiz</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Sort the drivers by their number of Grand Prix victories:</h1>
-    <ul id="quiz">
-      <li>Royal Flush</li>
-      <li>Straight Flush</li>
-      <li>Four of a kind</li>
-      <li>Full house</li>
-      <li>Flush</li>
-      <li>Straight</li>
-    </ul>
-    <button onclick="checkAnswer()">Check Answer</button>
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-    <script src="script.js"></script>
+    <h1 class = "heading">Test Your Knowledge of poker hands
+        <img src="logo.png" class="logo"> Love Maths
+    </h1>
+	<div class="game-area">
+		<div class="choice-area">
+			<button data-type="hard" class="btn btn--big btn--green">
+                <i class="fas fa-plus"></i>
+            </button>
+				<button data-type="easy" class="btn btn--big btn--blue">
+                <i class="fas fa-minus"></i>
+            </button>
+    </div>
+
+			<div class="question-area">
+				<span id="answerA">A</span>
+				<span id="answerB">B</span>
+				<span id="answerC">C</span>
+                <span id="answerD">D</span>
+                
+				<p class="answer-message">Enter Answer:</p>
+				<input id="answer-box" name="answer" type="number">
+		    </div>
+				<button data-type="submit" class="btn btn--gray">Submit Answer</button>
+			</div>
+			<div class="score-area">
+				<p class="scores">Correct Answers: <span id="score">0</span></p>
+				<p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+			</div>
+
+			<script src="script.js"></script>
   </body>
 </html>
