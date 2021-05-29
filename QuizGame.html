@@ -5,40 +5,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Poker Hand Quiz</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
   </head>
   <body>
-    <h1 class = "heading">Test Your Knowledge of poker hands
-        <img src="assets/images/1book27.jpg" class="hero" width = "50%"> 
-    </h1>
-	<div class="game-area">
-		<div class="choice-area">
-			<button data-type="hard" class="btn btn--big btn--green">
-                <img src="assets/images/1book2.jpg" width="100" >easy
-            </button>
-				<button data-type="easy" class="btn btn--big btn--blue">
-                <img src="assets/images/1book41.jpg" width="100" >hard
-            </button>
-    </div>
+        <header class="container">
+            <div class="row">
+                <div class="col-12"> 
+                    <nav class="navbar navbar-light navbar-expand-sm">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="active nav-item mr-2"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item mr-2"><a class="nav-link" href="Rules.html">rules</a></li>
+                            <li class="nav-item mr-2"><a class="nav-link" href="QuizGame.html">game</a></li>
+                            <li class="nav-item mr-2"><a class="nav-link" href="Resources.html">resources</a></li>
+                        </ul>
+                    </nav>
+                </div>  
+            </div>  
+               
+            <h1>The Helping Hand</h1>
+            </header>  
+            <div class = "container">     
+            <div class="row">
+                <div class="col-12"> 
+                    <h3>Test Your Knowledge of poker hands</h3>  
+                </div>  
+            </div>
+            <!-- choice area  - the column width is being pulled from the css for the deck of cards-->
+            <div class = "container">     
+            <div class="row">
+                <div class="col-6">       
+                        <img src = "assets/images/1book36.jpg" >
+                        <h3>EASY</h3>
+                </div>   
+                <div class="col-6">       
+                        <img src = "assets/images/1book41.jpg" >
+                        <h3>DIFFICULT</h3>
+                </div>                   
+            </div>
+            </div>
+</div> 
 
-			<div class="question-area">
-                <h3>Questions:</h3>
-				<span id="answerA">A</span>
-				<span id="answerB">B</span>
-				<span id="answerC">C</span>
-                <span id="answerD">D</span>
-                
-				<p class="answer-message">Enter Answer:</p>
-				<input id="answer-box" name="answer" type="number">
-		    </div>
-				<button data-type="submit" class="btn btn--gray">Submit Answer</button>
-			</div>
+        <!--
+	<div class="game-area">
+
+    </div> 
+     
+
+                <div class="question-area">
+                    <h3>Questions:</h3>
+                    <span id="answerA">A</span>
+                    <span id="answerB">B</span>
+                    <span id="answerC">C</span>
+                    <span id="answerD">D</span>
+                    
+                    <p class="answer-message">Enter Answer:</p>
+                    <input id="answer-box" name="answer" type="number">
+                </div>
+                    <button data-type="submit" class="btn btn--gray">Submit Answer</button>
+                </div>
+            </div>
+
+
 			<div class="score-area">
                 <h3>Scores:</h3>
 				<p class="scores">Correct Answers: <span id="score">0</span></p>
 				<p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
-			</div>
+            </div>
+            
 
-			<script src="script.js"></script>
+        <h4>Now that you are familiar with the poker rankings, test your memory.</h4>
+        <p><a href = Rules.html> Click here if you need to go back to the rankings page.</a></p>-->
   </body>
 </html>
