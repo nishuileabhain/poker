@@ -6,8 +6,6 @@ body {
     background-color: #f2eecb;
     color: black;
     text-align: center;
-
-
 }
 
 .quizarea{
@@ -18,7 +16,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;     
+    background-color: blanchedalmond;     
 }
 
 .quizarea .container {
@@ -39,17 +37,33 @@ body {
 
 .btn {
     background-color: goldenrod;
-    border: 1px solid royalblue;
+    border: 2px solid black;
     border-radius: 5px ;
     padding: 5px 10px;
-    color: seagreen;
+    color: black;
     outline: none;
 }
 
 .btn:hover{
-    border-color: black;
+    border-color: royalblue;
 }
 
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+
+.hide {
+  display: none;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -152,6 +166,14 @@ font-family: 'Alice', serif;
 .active {
     border-bottom: 3px solid red;
 }
+
+.btn.correct {
+    background-color: darkolivegreen;
+}
+
+.btn.wrong{
+    background-color: crimson;
+}
 /*
 #cover-text {
     font-size: 130%;
@@ -184,3 +206,4 @@ footer li {
     width: 32px;
     height: 32px;
 }
+

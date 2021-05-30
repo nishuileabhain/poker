@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Poker Hand Quiz</title>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <script defer src="assets/script.js"></script>
+
+
   </head>
   <body>
         <header class="container">
@@ -29,26 +32,31 @@
 <div class = quizarea><!--  quizarea-->
         <div class = "container" >
             <div id="question-container" class = "hide">
+            <div id = "question">Question:</div>
+                <!-- questions and answers contain default text-->
 
-            <div id = "question">Which of these would you not find in a royal flush?</div>
-            <div id = "answer-buttons" class = "btn-grid">
-                <button class = "btn">Answer 1 </button>
-                <button class = "btn">Answer 2 </button>
-                <button class = "btn">Answer 3 </button>
-                <button class = "btn">Answer 4 </button>
-
-            </div>
-
-                <div class = "controls">
-                    <button id = "start-btn" class = "start-btn btn"> start </button>
-                    <button id = "next-btn" class = "next-btn btn"> next </button>
-
+                <div id = "answer-buttons" class = "btn-grid">
+                        <button class = "btn">Answer 1 </button>
+                        <button class = "btn">Answer 2 </button>
+                        <button class = "btn">Answer 3 </button>
+                        <button class = "btn">Answer 4 </button>
                 </div>
+            </div>
+                <div class = "controls">
+                        <button id = "start-btn" class = "start-btn btn"> Start </button>
+                        <button id = "next-btn" class = "next-btn btn hide"> Next </button>
 
             </div>         
         </div>
     
-    </div><!-- EO quizarea-->
+</div><!-- EO quizarea-->
+
+			<div class="score-area">
+                <h3>Scores:</h3>
+				<p class="scores">Correct Answers: <span id="score">0</span></p>
+				<p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+            </div>
+
             <!-- choice area  - the column width is being pulled from the css for the deck of cards-->
             <!-- when either of these buttons is clicked the quiz will begin
 
@@ -99,11 +107,7 @@
             </div>
 
 
-			<div class="score-area">
-                <h3>Scores:</h3>
-				<p class="scores">Correct Answers: <span id="score">0</span></p>
-				<p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
-            </div>
+
             
 
         <h4>Now that you are familiar with the poker rankings, test your memory.</h4>

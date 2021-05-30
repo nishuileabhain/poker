@@ -1,103 +1,139 @@
-// Wait until the DOM has loaded before running the game
-// Get the button elements, and add event listeners to them
+const startButton = document.getElementById('start-btn')
+const nextButton = document.getElementById('next-btn')
+const questionContainerElement = document.getElementById('question-container')
+const questionElement = document.getElementById('question')
+const answerButtonsElement = document.getElementById('answer-buttons')
 
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
+let shuffledQuestions, currentQuestionIndex
+let correctAnswers = 0;
+let wrongAnswers = 0;
 
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "submit") {
-                checkAnswer();
-            } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(gameType);
-            }
-        });
+startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () => {
+  currentQuestionIndex++
+  setNextQuestion()
+})
+
+function startGame() {
+  startButton.classList.add('hide')
+  shuffledQuestions = questions.sort(() => Math.random() - .5)
+  currentQuestionIndex = 0
+  questionContainerElement.classList.remove('hide')
+  setNextQuestion()
+}
+
+function setNextQuestion() {
+  resetState()
+  showQuestion(shuffledQuestions[currentQuestionIndex])
+}
+
+function showQuestion(question) {
+  questionElement.innerText = question.question
+  question.answers.forEach(answer => {
+    const button = document.createElement('button')
+    button.innerText = answer.text
+    button.classList.add('btn')
+    if (answer.correct) {
+      button.dataset.correct = answer.correct    
     }
-    runGame("easy");
-});
+    button.addEventListener('click', selectAnswer)
+    answerButtonsElement.appendChild(button)
+  })
+}
 
-// The main game "loop", called when the script is first loaded
-// and after the user's answer has been processed
+function resetState() {
+  clearStatusClass(document.body)
+  nextButton.classList.add('hide')
+  while (answerButtonsElement.firstChild) {
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+  }
+}
 
-function runGame(gameType) {
-
-    // Creates two numbers with a value of between 1 and 25
-
-
-    // Selects and displays the question depending on the gameType
-    // which we set when we called the function
-
-    if (gameType === "easy") {
-        displayEasyQuestion(num1, num2);
-    } else {
-        alert(`Unknown game type: ${gameType}`);
-        throw `Unknown game type ${gameType}, aborting`;
+function selectAnswer(e) {
+  const selectedButton = e.target
+  const correct = selectedButton.dataset.correct
+  setStatusClass(document.body, correct)
+  Array.from(answerButtonsElement.children).forEach(button => {
+    setStatusClass(button, button.dataset.correct)
+  })
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    nextButton.classList.remove('hide')
+  } else {
+    startButton.innerText = 'Restart'
+    startButton.classList.remove('hide')
+  }
+    if (selectedButton.dataset = correct) {
+        correctAnswers++
     }
+    else{
+        wrongAnswers++
+    }
+    document.getElementById("score").innerText = correctAnswers;
+    document.getElementById("incorrect").innerText = wrongAnswers;
+
 
 }
 
-// Called when the user clicks the Submit button or presses Enter
-
-function checkAnswer() {
-
-    let userAnswer = parseInt(document.getElementById("answer-box").value);
-    let calculatedAnswer = calculateRightAnswer(); // calculatedAnswer is an array
-    let isCorrect = userAnswer === calculatedAnswer[0]; // isCorrect has a true or false value
-
-    if (isCorrect) {
-        alert("Hey! You got it right :D");
-        incrementScore();
-    }
-    else {
-        alert(`Awww...you answered ${userAnswer}, the correct answer was ${calculatedAnswer[0]} :(`);
-        incrementWrongAnswer();
-    }
-
-    runGame(calculatedAnswer[1]);
+function setStatusClass(element, correct) {
+  clearStatusClass(element)
+  if (correct) {
+    element.classList.add('correct')
+  } else {
+    element.classList.add('wrong')
+  }
 }
 
-function calculateRightAnswer() {
-
-    // Gets the operands (the numbers) and the operator (plus, minus sign etc.)
-    // directly from the DOM
-
-    let operand1 = parseInt(document.getElementById("operand1").innerText);
-    let operand2 = parseInt(document.getElementById("operand2").innerText);
-    let operator = document.getElementById("operator").innerText;
-
-    if (operator === "+") { // This is the addition game
-        return [operand1 + operand2, "addition"]; // return an array containing the correct answer and game type
-    }
-    else {
-        alert(`Unimplemented operator: ${operator}`);
-        throw `Unimplemented operator ${operator}, aborting`;
-    }
+function clearStatusClass(element) {
+  element.classList.remove('correct')
+  element.classList.remove('wrong')
 }
+
+//array of question elements
+const questions = [
+  {
+    question: 'What is a suit?',
+    answers: [
+      { text: 'diamonds', correct: true },
+      { text: 'queens', correct: false }
+    ]
+  },
+  {
+    question: 'Which of these would you never find in a royal flush?',
+    answers: [
+      { text: 'Ten of Clubs', correct: false },
+      { text: 'Jack of Diamonds', correct: false },
+      { text: 'Nine of Hearts', correct: true },
+      { text: 'Ace of Spades', correct: false }
+    ]
+  },
+  {
+    question: 'How Many cards make up one hand?',
+    answers: [
+      { text: 'Three', correct: false },
+      { text: 'Five', correct: true },
+      { text: 'As many as you like', correct: false },
+      { text: 'Seven', correct: false }
+    ]
+  },
+  {
+    question: 'What is right?',
+    answers: [
+      { text: 'wrong6', correct: false },
+      { text: 'right', correct: true }
+    ]
+  }
+]
 
 function incrementScore() {
     // Gets the current score from the DOM and increments it
 
     let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++oldScore;
+    document.getElementById("score").innerText = correctAnswers;
 }
 
 function incrementWrongAnswer() {
     // Gets the current tally of incorrect answers from the DOM and increments it
 
     let oldScore = parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText = ++oldScore;
+    document.getElementById("incorrect").innerText = wrongAnswers;
 }
-
-// Displays the questions.
-
-function displayEasyQuestion(operand1, operand2) {
-    document.getElementById("operand1").textContent = operand1;
-    document.getElementById("operand2").textContent = operand2;
-    document.getElementById("operator").textContent = "+";
-}
-
-function displayDifficultQuestion() {
-
-}
-
