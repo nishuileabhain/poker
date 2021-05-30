@@ -30,6 +30,30 @@ body {
     box-shadow: 0 0 10px 2px;
 }
 
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: goldenrod;
+    border: 1px solid royalblue;
+    border-radius: 5px ;
+    padding: 5px 10px;
+    color: seagreen;
+    outline: none;
+}
+
+.btn:hover{
+    border-color: black;
+}
+
+
+
+
+
 h2, p {
     text-align: left;
 
@@ -55,6 +79,8 @@ header {
   padding-right: 0;
 
 }
+
+
 
 .container{
     text-align: center;
