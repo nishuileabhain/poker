@@ -6,8 +6,28 @@ body {
     background-color: #f2eecb;
     color: black;
     text-align: center;
-    margin: 0;
 
+
+}
+
+.quizarea{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;     
+}
+
+.quizarea .container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
 }
 
 h2, p {
