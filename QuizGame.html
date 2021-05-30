@@ -22,7 +22,7 @@
                 </div>  
             </div>  
                
-            <h1>The Helping Hand</h1>
+            <h1>Quiz</h1>
             </header>  
             <div class = "container">     
             <div class="row">
@@ -31,17 +31,23 @@
                 </div>  
             </div>
             <!-- choice area  - the column width is being pulled from the css for the deck of cards-->
-            <div class = "container">     
-            <div class="row">
-                <div class="col-6">       
-                        <img src = "assets/images/1book36.jpg" >
-                        <h3>EASY</h3>
-                </div>   
-                <div class="col-6">       
-                        <img src = "assets/images/1book41.jpg" >
-                        <h3>DIFFICULT</h3>
-                </div>                   
-            </div>
+            <!-- when either of these buttons is clicked the quiz will begin-->
+
+            <div class = "container" id="choice">     
+                <div class="row">
+                    <div class="column">
+                        <button id = "easy">      
+                            <img src = "assets/images/1book36.jpg" style="width: 90%; height: auto;">
+                            <h3>EASY</h3>
+                        </button> 
+                    </div>   
+                    <div class="column">
+                        <button id = "difficult">        
+                            <img src = "assets/images/1book41.jpg" style="width: 90%; height: auto;">
+                            <h3>DIFFICULT</h3>
+                        </button>                            
+                    </div>                   
+                </div>
             </div>
 </div> 
 
