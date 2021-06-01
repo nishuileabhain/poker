@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 
 body {
     font-family: 'Alice', serif;
@@ -20,6 +21,25 @@ body {
 }
 
 .quizarea .container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.rulesarea {
+    margin: 0;
+    padding: 0;
+    display: flex; /*without this it will not center the rules container*/
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;     
+}
+.rules-container {
     width: 800px;
     max-width: 80%;
     background-color: white;
