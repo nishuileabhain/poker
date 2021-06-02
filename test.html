@@ -12,56 +12,95 @@
 <body>
 <!-- <div style='transform: scale(0.65); position: relative; top: -100px;'> -->
 <div class = "question-area">
-  <span = "question1">
-  <h3>Which of these would you <strong>never</strong> find in a royal flush?</h3>
-  <p>Choose the correct answer</p>
-  </span>
-  <hr />
+    
+    <div class = "question" id = "q1">
+        <h3>Which of these would be a good answer for question one?</p>
+    </div>
+    <hr />
 
-  <div id='block-1A' >
-    <label for='option-1A' >
-      <input type='radio' name='option' value='9diamonds' id='option-1A' />
-        <img src="assets/images/pack/9d.png">
+        <div id='block-1A' class = "option">
+        <button data-type='wrong' class = "btn btn--ans btn--wrong">
+            <img src="assets/images/pack/jd.png">
+        <p>this is all wrong</p>
+        </button>
+    </div>
+    <hr />
 
-      nine of diamonds</label>
-    <span id='result-1A'></span>
+
+    <div id='block-1B' class = "option">
+        <button data-type='wrong' class = "btn btn--ans btn--wrong">
+            <img src="assets/images/pack/10s.png">
+        <p>nope not me</p>
+        </button>
+    </div>
+    <hr />
+
+    <div id='block-1C' class = "option">
+        <button data-type='correct' class = "btn btn--ans btn--correct">
+            <img src="assets/images/pack/9d.png">
+        <p>good choice</p>
+        </button>
+    </div>
+    <hr />
+        <div id='block-1D' class = "option">
+        <button data-type='wrong' class = "btn btn--ans btn--wrong">
+        <img src="assets/images/pack/ac.png">
+        <p>I wouldn't click this one</p>
+        </button>
+    </div>
+    <hr />
+
+        <div class = "question" id = "q2">
+        <h3>Which of these would you <strong>never</strong> find in a royal flush?</h3>
+        <p>Choose the correct answer</p>
+    </div>
+    <hr />
+
+    <div id='block-2A' class = "option">
+        <button data-type='correct' class = "btn btn--ans btn--correct">
+            <img src="assets/images/pack/9d.png">
+        <p>nine of diamonds</p>
+        </button>
+    </div>
+    <hr />
+
+        <div id='block-2B' class = "option">
+        <button data-type='wrong' class = "btn btn--ans btn--wrong">
+            <img src="assets/images/pack/jd.png">
+        <p>jack of diamonds</p>
+        </button>
+    </div>
+    <hr />
+
+
+    <div id='block-2C' class = "option">
+        <button data-type='wrong' class = "btn btn--ans btn--wrong">
+            <img src="assets/images/pack/10s.png">
+        <p>ten of spades</p>
+        </button>
+    </div>
+    <hr />
+
+        <div id='block-2D' class = "option">
+        <button data-type='wrong' class = "btn btn--ans btn--wrong">
+        <img src="assets/images/pack/ac.png">
+        <p>ace of clubs</p>
+        </button>
+    </div>
+    <hr />
+</div> <!--EO questionarea-->
+
+  <div class="scores">
+      <p>
+          correct : <span id="correct"> 0 </span>
+      </p>
+        <p>
+          wrong : <span id="wrong"> 0 </span>   
+      </p>
   </div>
-  <hr />
-
-  <div id='block-1B' >
-    <label for='option-1B' >
-      <input type='radio' name='option' value='jdiamonds' id='option-1B'  />
-        <img src="assets/images/pack/jd.png">
-      jack of diamonds</label>
-    <span id='result-1B'></span>
-  </div>
-  <hr />
-
-  <div id='block-1C' >
-    <label for='option-1C' >
-      <input type='radio' name='option' value='10spades' id='option-1C'  /> 
-     <!-- <input type="image" name="Name of image button" src="assets/images/pack/2d.png" border="10px" alt="two of diamonds">  -->
-        <img src="assets/images/pack/10s.png">
-     ten of spades
-
-    </label>
-    <span id='result-1C'></span>
-  </div>
-  <hr />
-
-  <div id='block-1D' >
-    <label for='option-1D' >
-      <input type='radio' name='option' value='aclubs' id='option-1D'  />
-    <img src="assets/images/pack/ac.png">
-      ace of clubs</label>
-    <span id='result-1D'></span>
-  </div>
 
   <hr />
-     <!-- submit button has its own style below  -->
-  <button type='button' onclick='displayAnswer1()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
 </div>
-<a id='showanswer1'></a>
 
 </body>
 </html>

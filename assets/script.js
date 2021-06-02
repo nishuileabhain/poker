@@ -28,10 +28,10 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-  questionElement.innerText = question.question
-  question.answers.forEach(answer => {
+  questionElement.innerHTML = question.question
+  question.answers.forEach(answer => { //built-in forEach() method calls a function once for each element in the answers array
     const button = document.createElement('button')
-    button.innerText = answer.text
+    button.innerHTML = answer.text
     button.classList.add('btn')
     if (answer.correct) {
       button.dataset.correct = answer.correct    
@@ -59,7 +59,9 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    startButton.innerText = 'Restart'
+    correctAnswers = 0; //maybe specify if curr quest index is zero
+    wrongAnswers = 0;
+    startButton.innerHTML = 'Restart'
     startButton.classList.remove('hide')
   }
     if (selectedButton.dataset = correct) {
@@ -68,10 +70,8 @@ function selectAnswer(e) {
     else{
         wrongAnswers++
     }
-    document.getElementById("score").innerText = correctAnswers;
-    document.getElementById("incorrect").innerText = wrongAnswers;
-
-
+    document.getElementById("score").innerHTML = correctAnswers;
+    document.getElementById("incorrect").innerHTML = wrongAnswers;
 }
 
 function setStatusClass(element, correct) {
@@ -121,19 +121,36 @@ const questions = [
       { text: 'wrong6', correct: false },
       { text: 'right', correct: true }
     ]
+  },
+    {
+    question: 'image test?',
+    answers: [
+      { text: 'make me an image', correct: false },
+     // document.getElementById("x").src="assets/images/pack.ks.png"
+      { text: 'right', correct: true }
+    ]
   }
 ]
 
 function incrementScore() {
     // Gets the current score from the DOM and increments it
 
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = correctAnswers;
+    let oldScore = parseInt(document.getElementById("score").innerHTML);
+    document.getElementById("score").innerHTML = correctAnswers;
 }
 
 function incrementWrongAnswer() {
     // Gets the current tally of incorrect answers from the DOM and increments it
 
-    let oldScore = parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText = wrongAnswers;
+    let oldScore = parseInt(document.getElementById("incorrect").innerHTML);
+    document.getElementById("incorrect").innerHTML = wrongAnswers;
 }
+
+/*function showCard() {
+  var x = document.createElement("IMG");
+  x.setAttribute("src", "assets/images/pack/ac.png");
+  x.setAttribute("width", "304");
+  x.setAttribute("height", "228");
+  x.setAttribute("alt", "The Pulpit Rock");
+  document.body.appendChild(x);
+}*/

@@ -30,10 +30,27 @@
             <h3>Test Your Knowledge of poker hands</h3>  
 
         </header>  
+			<div class="score-area">
+                <div class = "container" id="scores">     
+                    <div class="row">               
+                    <h3>Scores:</h3>
+                    <div class="column">
+                    <img src = "assets/images/1book36.jpg" style="width: 90%; height: auto;">
+                    <p class="scores">Correct Answers: <span id="score">0</span></p>
+                    </div>
+                    <div class="column">
+                    <img src = "assets/images/1book41.jpg" style="width: 90%; height: auto;">
+                    <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>                        
+                    </div>
+                    </div>
+                </div>                        
+            </div>
 <div class = quizarea><!--  quizarea-->
         <div class = "container" >
             <div id="question-container" class = "hide">
-            <div id = "question">Question:</div>
+            <div id = "question">Question:
+                <img class="img" src="assets/images/pack/jd.png">
+            </div>
                 <!-- questions and answers contain default text-->
 
                 <div id = "answer-buttons" class = "btn-grid">
@@ -52,11 +69,7 @@
     
 </div><!-- EO quizarea-->
 
-			<div class="score-area">
-                <h3>Scores:</h3>
-				<p class="scores">Correct Answers: <span id="score">0</span></p>
-				<p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
-            </div>
+
 
             <!-- choice area  - the column width is being pulled from the css for the deck of cards-->
             <!-- when either of these buttons is clicked the quiz will begin
