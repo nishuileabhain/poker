@@ -18,3 +18,18 @@ label {
     color: red;    
 }
 
+.correct{
+    border: 3px solid limegreen;
+    color: limegreen;
+}
+    /*
+    innerHTML = 'Correct!'
+    */
+
+    .wrong{
+    border: 3px solid red;
+    color: red;
+    /*
+    innerHTML = 'Incorrect!'
+    */
+}
