@@ -127,7 +127,7 @@ const questions = [
     answers: [
       { text: 'make me an image', correct: false },
      // document.getElementById("x").src="assets/images/pack.ks.png"
-      { text: 'right', correct: true }
+      { text: 'correct answer', correct: true }
     ]
   }
 ]

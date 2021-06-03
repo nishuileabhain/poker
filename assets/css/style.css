@@ -153,12 +153,7 @@ img {
 
 
 
-.navbar {
-    float: left;
-    font-size: 300;
-    color: blue; 
-    text-decoration: none;
-}
+
 
 ul li{
         list-style-type: none; /*no bullet points anywhere*/
@@ -171,21 +166,45 @@ ul li{
     color:white;
 }
 
+/*navbar
+.navbar {
+    float: left;
+    font-size: 300;
+    color: blue; 
+    text-decoration: none;
+}*/
+
+.bi-suit-heart-fill, .bi-suit-diamond-fill {
+ color: red;
+}
+
+.bi-suit-spade-fill, .bi-suit-club-fill {
+ color: black;
+}
 
 .navbar {
-color: inherit;
+color: slategray;
 background-color:inherit;
 font-family: 'Alice', serif;
+letter-spacing: 5px;
+float: right;
 }
 
-.navbar a:hover {
-    border-bottom: 3px solid red;
-    border-top: 3px solid red;
+.navbar a:hover i {
+    /*border-bottom: 3px solid red;
+    border-top: 3px solid red;*/
+    color: white;
+    font-size: 110%;
 }
+
 
 .active {
-    border-bottom: 3px solid red;
+    border: 1px solid slategray;
+    border-radius: 5px;
 }
+
+
+
 
 .btn.correct {
     background-color: darkolivegreen;
