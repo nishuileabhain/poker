@@ -8,6 +8,14 @@ let shuffledQuestions, currentQuestionIndex
 let correctAnswers = 0;
 let wrongAnswers = 0;
 
+window.onload = function(){
+
+    image.onmousedown = cardtrick;
+
+    image.onmouseup = cardUntrick;
+
+}
+
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
@@ -146,6 +154,18 @@ function incrementWrongAnswer() {
     document.getElementById("incorrect").innerHTML = wrongAnswers;
 }
 
+
+function cardtrick() {
+    
+    var diamondAce = document.getElementById("image");
+    diamondAce.src = "assets/images/pack/ad.png";
+}
+
+function cardUntrick() {
+    
+    var clubAce = document.getElementById("image");
+    clubAce.src = "assets/images/pack/ac.png";
+}
 /*function showCard() {
   var x = document.createElement("IMG");
   x.setAttribute("src", "assets/images/pack/ac.png");
