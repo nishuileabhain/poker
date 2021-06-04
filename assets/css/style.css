@@ -188,6 +188,7 @@ background-color:inherit;
 font-family: 'Alice', serif;
 letter-spacing: 5px;
 float: right;
+text-align: right;
 }
 
 .navbar a:hover i {
