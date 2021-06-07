@@ -9,6 +9,16 @@ body {
     text-align: center;
 }
 
+#intro p
+{
+    text-align: center;
+    justify-content: center;
+
+}
+
+.question-image {
+  display: inline-block; 
+}
 .quizarea{
     margin: 0;
     padding: 0;
@@ -37,7 +47,7 @@ body {
     height: auto;
     justify-content: center;
     align-items: center;
-    background-color: blue;     
+    background-color: red;     
 }
 .rules-container {
     width: 800px;
@@ -50,7 +60,7 @@ body {
 
 .btn-grid {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(5, auto);
     gap: 10px;
     margin: 20px 0;
 }
@@ -125,22 +135,7 @@ header {
     margin-top: 50px;
 }
 
-/*
-img {
-    float:left;
-    min-width:33%;
-    height:auto;  padding: 1px;
-}
 
-.hand img{
-    max-width: 20%;
-
-}
-.hand {
-    height: 40px;
-    padding-right: 5px;
-}
-*/
  Clear floats after image containers 
 .row::after {
   content: "";
@@ -214,27 +209,7 @@ text-align: right;
 .btn.wrong{
     background-color: crimson;
 }
-/*
-#cover-text {
-    font-size: 130%;
-}
 
-#cover-text, cover-text h2 {
-    color:#555555;
-}
-.bglogo {
-    background: url("../images/bghike.jpg");
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 300px;
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;     
-}*/
 
     /*footer part*/
 footer li {
@@ -247,3 +222,18 @@ footer li {
     height: 32px;
 }
 
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 50%;
+}
+
+
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

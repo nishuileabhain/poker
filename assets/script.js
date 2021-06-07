@@ -1,7 +1,8 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
+const questionElement = document.getElementById('questionID')//renamed to show clearly that this is coming from the html page
+//const questionElement = document.getElementById('questionID','imgID')//renamed to show clearly that this is coming from the html page
 const answerButtonsElement = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex
@@ -24,9 +25,11 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
   startButton.classList.add('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
+  shuffledQuestions = questionList.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
-  questionContainerElement.classList.remove('hide')
+    correctAnswers = 0; //maybe specify if curr quest index is zero
+    wrongAnswers = 0;
+  questionContainerElement.classList.remove('hide') //once the start button it clicked it will disappear
   setNextQuestion()
 }
 
@@ -35,11 +38,11 @@ function setNextQuestion() {
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-function showQuestion(question) {
-  questionElement.innerHTML = question.question
+function showQuestion(question) { //this is the question object as defined below
+  questionElement.innerHTML = question.question //both from below object??
   question.answers.forEach(answer => { //built-in forEach() method calls a function once for each element in the answers array
     const button = document.createElement('button')
-    button.innerHTML = answer.text
+    button.innerHTML = answer.texty
     button.classList.add('btn')
     if (answer.correct) {
       button.dataset.correct = answer.correct    
@@ -48,6 +51,8 @@ function showQuestion(question) {
     answerButtonsElement.appendChild(button)
   })
 }
+
+// for showing the next question, not resetting the whole quiz
 
 function resetState() {
   clearStatusClass(document.body)
@@ -59,7 +64,7 @@ function resetState() {
 
 function selectAnswer(e) {
   const selectedButton = e.target
-  const correct = selectedButton.dataset.correct
+  const correct = selectedButton.dataset.correct //correct is set as a string rather than a boolean
   setStatusClass(document.body, correct)
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
@@ -67,8 +72,6 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    correctAnswers = 0; //maybe specify if curr quest index is zero
-    wrongAnswers = 0;
     startButton.innerHTML = 'Restart'
     startButton.classList.remove('hide')
   }
@@ -97,48 +100,57 @@ function clearStatusClass(element) {
 }
 
 //array of question elements
-const questions = [
-  {
-    question: 'What is a suit?',
-    answers: [
-      { text: 'diamonds', correct: true },
-      { text: 'queens', correct: false }
-    ]
-  },
-  {
+const questionList = [
+      {
     question: 'Which of these would you never find in a royal flush?',
     answers: [
-      { text: 'Ten of Clubs', correct: false },
-      { text: 'Jack of Diamonds', correct: false },
-      { text: 'Nine of Hearts', correct: true },
-      { text: 'Ace of Spades', correct: false }
+      { texty: 'Ten of Clubs', correct: false },
+      { texty: 'Jack of Diamonds', correct: false },
+      { texty: 'Nine of Hearts', correct: true },
+      { texty: 'Ace of Spades', correct: false },
+        { texty: 'Ace of Spades', correct: false }
+    ]
+  },
+        {
+    question: 'Five cards in an ordered sequence, all in the same suit is known as a:',
+    answers: [
+      { texty: 'Full House', correct: false },
+      { texty: 'Royal Flush', correct: false },
+      { texty: 'Straight Flush', correct: true },
+      { texty: 'Flush', correct: false },
+    { texty: 'Straight', correct: false }
     ]
   },
   {
-    question: 'How Many cards make up one hand?',
+    question: 'When would you play a high card?',
     answers: [
-      { text: 'Three', correct: false },
-      { text: 'Five', correct: true },
-      { text: 'As many as you like', correct: false },
-      { text: 'Seven', correct: false }
+      { texty: 'When you can not make up any hand' , correct: true },
+      { texty: 'When you have an ace' , correct: false },
+      { texty: 'If you don\'t have a good kicker card' , correct: false },
+    ]
+},
+  {
+    question: 'Five cards in a sequence, but not of the same suit is known as a:',
+    answers: [
+      { texty: 'Pair' , correct: false },
+      { texty: 'Straight' , correct: true },
+      { texty: 'Flush' , correct: false },
+      { texty: 'Full House' , correct: false },
+      { texty: 'Straight Flush' , correct: false },
     ]
   },
   {
-    question: 'What is right?',
+    question: 'Three of a kind with a pair makes up a:',
     answers: [
-      { text: 'wrong6', correct: false },
-      { text: 'right', correct: true }
-    ]
-  },
-    {
-    question: 'image test?',
-    answers: [
-      { text: 'make me an image', correct: false },
-     // document.getElementById("x").src="assets/images/pack.ks.png"
-      { text: 'correct answer', correct: true }
+      { texty: 'Pair' , correct: false },
+      { texty: 'Straight' , correct: false },
+      { texty: 'Flush' , correct: false },
+      { texty: 'Full House' , correct: true },
+      { texty: 'Straight Flush' , correct: false },
     ]
   }
-]
+  
+] //EO questions list
 
 function incrementScore() {
     // Gets the current score from the DOM and increments it
@@ -154,6 +166,11 @@ function incrementWrongAnswer() {
     document.getElementById("incorrect").innerHTML = wrongAnswers;
 }
 
+function showCard() {
+    
+    var diamondAce = document.getElementById("image");
+    diamondAce.src = "assets/images/pack/ad.png";
+}
 
 function cardtrick() {
     
@@ -166,11 +183,13 @@ function cardUntrick() {
     var clubAce = document.getElementById("image");
     clubAce.src = "assets/images/pack/ac.png";
 }
-/*function showCard() {
-  var x = document.createElement("IMG");
-  x.setAttribute("src", "assets/images/pack/ac.png");
-  x.setAttribute("width", "304");
-  x.setAttribute("height", "228");
-  x.setAttribute("alt", "The Pulpit Rock");
-  document.body.appendChild(x);
-}*/
+
+
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+  });
+}
