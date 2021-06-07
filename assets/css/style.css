@@ -15,10 +15,6 @@ body {
     justify-content: center;
 
 }
-
-.question-image {
-  display: inline-block; 
-}
 .quizarea{
     margin: 0;
     padding: 0;
@@ -158,16 +154,9 @@ ul li{
 
  a {
     text-decoration: none;
-    color:white;
+    color:slategray;
 }
 
-/*navbar
-.navbar {
-    float: left;
-    font-size: 300;
-    color: blue; 
-    text-decoration: none;
-}*/
 
 .bi-suit-heart-fill, .bi-suit-diamond-fill {
  color: red;
@@ -210,17 +199,6 @@ text-align: right;
     background-color: crimson;
 }
 
-
-    /*footer part*/
-footer li {
-    text-decoration: none;
-    list-style-type: none;
-    letter-spacing: 4px;
-    float: right;
-    margin-right: 30px;
-    width: 32px;
-    height: 32px;
-}
 
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
