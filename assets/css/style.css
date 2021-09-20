@@ -20,6 +20,10 @@ body {
     text-align: center;
  }
 
+ .footer p {
+     text-align: center;
+ }
+
 .title-image {
     /*shadow from https://www.w3schools.com/css/css3_shadows_box.asp*/
     border-radius: 5%;
