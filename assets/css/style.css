@@ -180,14 +180,15 @@ text-align: right;
 }
 
 
-.active {
-    border: 3px solid grey;
-    border-radius: 3px;
+.navbar .active {
     text-transform: uppercase;
-    background-color: grey;
-    opacity: 0.3;
+    font-size: 150%;
 }
 
+ .active i {
+    color: white;
+    text-shadow: 2px 2px black;
+}
 
 
 
