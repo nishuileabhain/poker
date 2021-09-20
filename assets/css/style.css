@@ -9,6 +9,17 @@ body {
     text-align: center;
 }
 
+.footer {
+    /*footer modified from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_footer*/
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+ }
+
 .title-image {
     /*shadow from https://www.w3schools.com/css/css3_shadows_box.asp*/
     border-radius: 5%;

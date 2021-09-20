@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Poker Hand Quiz</title>
@@ -11,85 +11,97 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 
-  </head>
-  <body>
-        <header class="container">
-            <div class="row">
-                <div class="col-12"> 
-                        <nav class="navbar navbar-default">
-                        <div class="container-fluid">
-                                <div class="navbar-header">
-                                    <a class="navbar-brand" href="#">Pokerland</a>
-                                </div>
-                                    <ul class="navbar-nav ">               
-                                    <li class="nav-item mr-2"><a class="nav-link" href="index.html"> Home <i class="bi bi-suit-heart-fill"></i></a></li> 
-                                                    
-                                    <li class="nav-item mr-2"><a class="nav-link" href="Rules.html"> Rules <i class="bi bi-suit-club-fill"></i></a></li>
-                                                    
-                                    <li class="active nav-item mr-2"><a class="nav-link" href="QuizGame.html"> Quiz <i class="bi bi-suit-diamond-fill"></i></a></li>
-                                                
-                                    <li class="nav-item mr-2"><a class="nav-link" href="Resources.html"> Resources <i class="bi bi-suit-spade-fill"></i></a></li> 
-                                </ul>
-                            </div>
-                        </nav> 
-                </div>  
-            </div>  
-               
-            <h1>Quiz</h1>
-        <h3>Now that you are familiar with the poker rankings, test your memory.</h3>
-        <p><a href = Rules.html> Click here if you need to review the rankings.</a></p>
-        </header>  
-			<div class="score-area">
-                <div class = ".container-fluid" id="scores"> <!--full width of screen--> 
-                      <h3>Scores:</h3>                  
-                    <div class="row justify-content-center"> 
+</head>
 
-                        <div class="column">
-                            <img src = "assets/images/1book36.jpg" style="width: 90%; height: auto;">
-                            <p class="scores">Correct Answers: <span id="score">0</span></p>
+<body>
+    <header class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">Pokerland</a>
                         </div>
-                        <div class="column">
-                            <img src = "assets/images/1book41.jpg" style="width: 90%; height: auto;">
-                            <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>                        
-                        </div>
-                        <div class="column">
-                            <img id = "image" src = "assets/images/pack/ac.png" style="width: 90%; height: auto;">
-                            <p class="cardtrick"> hold your mouse over me and I will change </p>                        
-                        </div>
+                        <ul class="navbar-nav ">
+                            <li class="nav-item mr-2"><a class="nav-link" href="index.html"> Home <i
+                                        class="bi bi-suit-heart-fill"></i></a></li>
+
+                            <li class="nav-item mr-2"><a class="nav-link" href="Rules.html"> Rules <i
+                                        class="bi bi-suit-club-fill"></i></a></li>
+
+                            <li class="active nav-item mr-2"><a class="nav-link" href="QuizGame.html"> Quiz <i
+                                        class="bi bi-suit-diamond-fill"></i></a></li>
+
+                            <li class="nav-item mr-2"><a class="nav-link" href="Resources.html"> Resources <i
+                                        class="bi bi-suit-spade-fill"></i></a></li>
+                        </ul>
                     </div>
-                </div>                        
+                </nav>
             </div>
-<div class = quizarea><!--  quizarea-->
-        <div class = "container" >
-            <div id="question-container" class = "hide">
-                <div id = "questionID">Question:</div>
-            
+        </div>
+
+        <h1>Quiz</h1>
+        <h3>Now that you are familiar with the poker rankings, test your memory.</h3>
+        <p><a href=Rules.html> Click here if you need to review the rules.</a></p>
+    </header>
+
+    <div class="score-area">
+        <div class=".container-fluid" id="scores">
+            <!--full width of screen-->
+            <h3>Scores:</h3>
+            <div class="row justify-content-center">
+
+                <div class="column">
+                    <img src="assets/images/1book36.jpg" style="width: 90%; height: auto;">
+                    <p class="scores">Correct Answers: <span id="score">0</span></p>
+                </div>
+                <div class="column">
+                    <img src="assets/images/1book41.jpg" style="width: 90%; height: auto;">
+                    <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+                </div>
+                <div class="column">
+                    <img id="image" src="assets/images/pack/ac.png" style="width: 90%; height: auto;">
+                    <p class="cardtrick"> hold your mouse over me and I will change </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=quizarea>
+        <!--  quizarea-->
+        <div class="container">
+            <div id="question-container" class="hide">
+                <div id="questionID">Question:</div>
+
                 <!-- questions and answers contain default text -->
 
-                <div id = "answer-buttons" class = "btn-grid">
+                <div id="answer-buttons" class="btn-grid">
                     <!--    <img class="imgID" src="assets/images/pack/jd.png">
                         <img class="imgID" src="assets/images/pack/jd.png">
                         <img class="imgID" src="assets/images/pack/jd.png">
                         <img class="imgID" src="assets/images/pack/jd.png">
                         <img class="imgID" src="assets/images/pack/jd.png">-->
-                        <button class = "btn"><img src="assets/images/peeping.jpg"></button>
-                        <button class = "btn"><img src="assets/images/peeping.jpg"></button>
-                        <button class = "btn"><img src="assets/images/peeping.jpg"></button>
-                        <button class = "btn"><img src="assets/images/peeping.jpg"></button> 
-                        <button class = "btn"><img src="assets/images/peeping.jpg"></button> 
+                    <button class="btn"><img src="assets/images/peeping.jpg"></button>
+                    <button class="btn"><img src="assets/images/peeping.jpg"></button>
+                    <button class="btn"><img src="assets/images/peeping.jpg"></button>
+                    <button class="btn"><img src="assets/images/peeping.jpg"></button>
+                    <button class="btn"><img src="assets/images/peeping.jpg"></button>
                 </div>
             </div>
-                <div class = "controls">
-                        <button id = "start-btn" class = "start-btn btn"> Start </button>
-                        <button id = "next-btn" class = "next-btn btn hide"> Next </button>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn"> Start </button>
+                <button id="next-btn" class="next-btn btn hide"> Next </button>
 
-                </div>         
+            </div>
         </div>
-    
-</div><!-- EO quizarea-->
 
-           
+    </div><!-- EO quizarea-->
 
 
-  </body>
+
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+</body>
+
 </html>
