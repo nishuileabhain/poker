@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=IM+Fell+English:ital@1&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 
 body {
@@ -15,13 +15,15 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: black;
+    background-color: darkslategray;
     color: white;
     text-align: center;
  }
 
  .footer p {
      text-align: center;
+     color: white;
+
  }
 
 .title-image {
@@ -50,6 +52,11 @@ body {
     justify-content: center;
     align-items: center;
     background-color: blanchedalmond;     
+}
+
+#question-container{
+    background-color: coral;
+    border-radius: 50%;
 }
 
 .quizarea .container {
@@ -104,6 +111,8 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
+    font-family: 'IM Fell English', serif;
+    border-radius: 50%;
 }
 
 
