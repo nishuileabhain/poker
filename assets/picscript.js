@@ -129,42 +129,102 @@ function clearStatusClass(element) {
 //array of question elements
 //let image = document.createElement("img");
 const questionList = [
-      {
-    question: 'pick ace of hearts',
+      {//Any five cards of the same suit, but not in a sequence
+    question: 'Which card would you change to make a flush?',
+    answers: [
+      { imagey: 'assets/images/pack/6h.png', correct: false },
+      { imagey: 'assets/images/pack/jh.png', correct: false },
+      { imagey: 'assets/images/pack/kh.png', correct: false },
+      { imagey: 'assets/images/pack/2h.png', correct: false },
+      { imagey: 'assets/images/pack/2d.png', correct: true },
+    ]
+  },
+        { //A, K, Q, J & 10 in all the same suit
+    question: 'Which card would you change to make a royal flush?',
     answers: [
       { imagey: 'assets/images/pack/10d.png', correct: false },
-      { imagey: 'assets/images/pack/ac.png', correct: false },
-      { imagey: 'assets/images/pack/9c.png', correct: false },
-      { imagey: 'assets/images/pack/2d.png', correct: false },
-      { imagey: 'assets/images/pack/ah.png', correct: true },
-    ]
-  },
-        {
-    question: 'click jack of clubs',
-    answers: [
-      { imagey: 'assets/images/pack/2d.png', correct: false },
+      { imagey: 'assets/images/pack/jd.png', correct: false },
+      { imagey: 'assets/images/pack/qd.png', correct: false },
       { imagey: 'assets/images/pack/kd.png', correct: false },
-      { imagey: 'assets/images/pack/jc.png', correct: true },
-      { imagey: 'assets/images/pack/qh.png', correct: false },
-    { imagey: 'assets/images/pack/8h.png', correct: false }
+      { imagey: 'assets/images/pack/ah.png', correct: true }
     ]
   },
   {
-    question: 'click 9 of clubs',
+    question: 'Which card could you change to make a royal flush?',
     answers: [
-      { imagey: 'assets/images/pack/3d.png', correct: false },
+      { imagey: 'assets/images/pack/ad.png', correct: true },
+      { imagey: 'assets/images/pack/ah.png', correct: false },
+      { imagey: 'assets/images/pack/kh.png', correct: false },
+      { imagey: 'assets/images/pack/qh.png', correct: false },
+      { imagey: 'assets/images/pack/jh.png', correct: false },
+    ]
+  },
+  {// Five cards in an ordered sequence, all in the same suit.
+    question: 'Which card would you change to create a straight flush?',
+    answers: [
+      { imagey: 'assets/images/pack/4c.png', correct: false },
+      { imagey: 'assets/images/pack/3c.png', correct: false },
+      { imagey: 'assets/images/pack/ac.png', correct: true },
       { imagey: 'assets/images/pack/5c.png', correct: false },
-      { imagey: 'assets/images/pack/9c.png', correct: true },
-      { imagey: 'assets/images/pack/9d.png', correct: false },
-      { imagey: 'assets/images/pack/ac.png', correct: false },
+      { imagey: 'assets/images/pack/6c.png', correct: false },
     ]
   },
   {
-    question: 'pick queen of clubs',
+    question: 'Which card does NOT make up part of the four-of-a-kind?',
     answers: [
       { imagey: 'assets/images/pack/5d.png', correct: false },
-      { imagey: 'assets/images/pack/ac.png', correct: false },
+      { imagey: 'assets/images/pack/5h.png', correct: false },
+      { imagey: 'assets/images/pack/ah.png', correct: true },
+      { imagey: 'assets/images/pack/5c.png', correct: false },
+      { imagey: 'assets/images/pack/5s.png', correct: false },
+    ]
+  },
+  {
+    question: 'Which card does NOT make up part of the two-pair?',
+    answers: [
+      { imagey: 'assets/images/pack/3d.png', correct: false },
+      { imagey: 'assets/images/pack/5c.png', correct: true },
+      { imagey: 'assets/images/pack/9c.png', correct: false },
+      { imagey: 'assets/images/pack/9d.png', correct: false },
+      { imagey: 'assets/images/pack/3h.png', correct: false },
+    ]
+  },
+  { //Five cards in a sequence, but not of the same suit.
+    question: 'Which card would you change to make a straight?',
+    answers: [
+      { imagey: 'assets/images/pack/6d.png', correct: false },
+      { imagey: 'assets/images/pack/4c.png', correct: true },
+      { imagey: 'assets/images/pack/8d.png', correct: false },
+      { imagey: 'assets/images/pack/7s.png', correct: false },
+      { imagey: 'assets/images/pack/9h.png', correct: false },
+    ]
+  },
+  {
+    question: 'Which card does NOT make up part of the two-pair?',
+    answers: [
+      { imagey: 'assets/images/pack/3d.png', correct: false },
+      { imagey: 'assets/images/pack/5c.png', correct: true },
+      { imagey: 'assets/images/pack/9c.png', correct: false },
+      { imagey: 'assets/images/pack/9d.png', correct: false },
+      { imagey: 'assets/images/pack/3h.png', correct: false },
+    ]
+  },
+  {
+    question: 'Which card is the highest card you can play?',
+    answers: [
       { imagey: 'assets/images/pack/qc.png', correct: true },
+      { imagey: 'assets/images/pack/jd.png', correct: false },
+      { imagey: 'assets/images/pack/5c.png', correct: false },
+      { imagey: 'assets/images/pack/9d.png', correct: false },
+      { imagey: 'assets/images/pack/6h.png', correct: false },
+    ]
+  },
+  {
+    question: 'Which card is the highest card you can play?',
+    answers: [
+      { imagey: 'assets/images/pack/5d.png', correct: false },
+      { imagey: 'assets/images/pack/ac.png', correct: true },
+      { imagey: 'assets/images/pack/qc.png', correct: false },
       { imagey: 'assets/images/pack/3d.png', correct: false },
       { imagey: 'assets/images/pack/js.png', correct: false },
     ]
