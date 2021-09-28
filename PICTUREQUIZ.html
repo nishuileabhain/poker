@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Poker Hand Quiz</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">    
+</head>
+
+<body>
+    <header class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">Pokerland</a>
+                        </div>
+                        <ul class="navbar-nav ">
+                            <li class="nav-item mr-2"><a class="nav-link" href="index.html"> Home <i
+                                        class="bi bi-suit-heart-fill"></i></a></li>
+
+                            <li class="nav-item mr-2"><a class="nav-link" href="Rules.html"> Rules <i
+                                        class="bi bi-suit-club-fill"></i></a></li>
+
+                            <li class="active nav-item mr-2"><a class="nav-link" href="QuizGame.html"> Quiz <i
+                                        class="bi bi-suit-diamond-fill"></i></a></li>
+
+                            <li class="nav-item mr-2"><a class="nav-link" href="Resources.html"> Resources <i
+                                        class="bi bi-suit-spade-fill"></i></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <h1>Quiz</h1>
+        <h3>Now that you are familiar with the poker rankings, test your memory.</h3>
+        <p><a href=Rules.html> Click here if you need to review the rules.</a></p>
+    </header>
+
+
+        <div class="container-fluid">
+            <!--full width of screen-->
+            <h3>Scores:</h3>
+            <div class="row">
+
+                <div class="column">
+                    <img src="assets/images/1book36.jpg" style="width: auto; height: 200px;">
+                    <p class="scores">Correct Answers: <span id="score">0</span></p>
+                </div>
+                <div class="column">
+                    <img src="assets/images/1book41.jpg" style="width: auto; height: 200px;">
+                    <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+                </div>
+            </div><!--EO row-->
+                            <p>end of container</p>
+
+        </div>
+    
+        <!--  quizarea-->
+    <div class=quizarea>
+
+        <div class="container">
+            <div id="question-container" class="hide">
+                <!-- questions and answers contain default text -->
+                    <div id="questionID"><h2>Question text here</h2>
+
+                    </div>
+
+                    <div id="answer-buttons" class="btn-grid" style="display: inline;">
+                        <div class="container">
+                        <div class="row">
+
+                            <div class="column btnCard" >
+                                <img src="assets/images/pack/ad.png" style="width: 100%; height: auto;"></div>
+                            <div class="column btnCard">
+                                <img src="assets/images/pack/kd.png" style="width: 100%; height: auto;"></div>
+                            <div class="column btnCard">
+                                <img src="assets/images/pack/qd.png" style="width: 100%; height: auto;"></div>
+                            <div class="column btnCard">
+                                <img src="assets/images/pack/jd.png" style="width: 100%; height: auto;"></div>
+                            <div class="column btnCard">
+                                <img src="assets/images/pack/10d.png" style="width: 100%; height: auto;"></div>
+                        </div>
+                        </div><!--container
+                        <div class="btnCard" style="display: inline;">
+                            <img src="assets/images/drinkmez.jpg" style="max-height: 100px;">
+                        </div>
+                        <div class="btnCard" style="display: inline;">
+                            <img src="assets/images/drinkmez.jpg" style="max-height: 100px;">
+                        </div>
+                        <div class="btnCard" style="display: inline;">
+                            <img src="assets/images/drinkmez.jpg" style="max-height: 100px;">
+                        </div>
+                        <div class="btnCard" style="display: inline;">
+                            <img src="assets/images/drinkmez.jpg" style="max-height: 100px;">
+                        </div>-->
+
+                    </div>
+            </div>
+
+           
+                     <!-- <div class="rulesarea">
+                    <div class="rules-container">
+                        <div class="row">
+                            <div class="column">
+                                <img src="assets/images/pack/ad.png" style="width: 100%; height: auto;"></div>
+                            <div class="column">
+                                <img src="assets/images/pack/kd.png" style="width: 100%; height: auto;"></div>
+                            <div class="column">
+                                <img src="assets/images/pack/qd.png" style="width: 100%; height: auto;"></div>
+                            <div class="column">
+                                <img src="assets/images/pack/jd.png" style="width: 100%; height: auto;"></div>
+                            <div class="column">
+                                <img src="assets/images/pack/10d.png" style="width: 100%; height: auto;"></div>
+                        </div>-->
+
+
+
+
+                          
+                       
+
+
+
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn"> Start </button>
+                <button id="next-btn" class="next-btn btn hide"> Next </button>
+
+            </div>
+        </div><!-- EO container-->
+
+    </div><!-- EO quizarea-->
+
+
+
+
+    
+
+
+    <div class="footer">
+        <p>
+            <a href="https://github.com/nishuileabhain/poker">Github <i class="bi-github" role="img"
+                    aria-label="GitHub"></i></a>
+        </p>
+        <p>
+            <a href="mailto:nishuileabhain@gmail.com">Contact <i class="bi bi-envelope"></i></a>
+        </p>
+        <p>
+        </p><small>&copy; 2021</small>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script defer src="assets/picscript.js"></script>
+</body>
+
+</html>
