@@ -37,6 +37,13 @@ body {
     background-color: white;
     }
 
+    #questionID{
+        font-size: large;
+        font-weight: bolder;
+        color: pink;
+        padding: 20px 10px 30px 10px;
+    }
+
 #intro p
 {
     text-align: center;
@@ -51,21 +58,36 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: blanchedalmond;     
+    background-color: lightskyblue;     
 }
 
+/*
 #question-container{
     background-color: coral;
-    border-radius: 50%;
-}
+    border-radius: 10%;
+}*/
 
 .quizarea .container {
+    /*display: inline;
     width: 800px;
-    max-width: 80%;
+        border-radius: 5px;
+
+    */
+    max-width: 90%;
     background-color: white;
-    border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+}
+
+
+/*if I target all divs it works but if I try to only target btn-card it gets overridden with  block
+.answer-buttons div or btn grid do nothing*/
+.btn-grid div{
+display: inline;
+}
+
+#answer-buttons {
+    display: inline;
 }
 
 .rulesarea {
@@ -87,11 +109,16 @@ body {
     box-shadow: 0 0 10px 2px;
 }
 
-.btn-grid {
+.btn-grid div{
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    display: inline !important;
+    grid-template-columns: repeat(5); /*five columns*/
     gap: 10px;
     margin: 20px 0;
+}
+
+.btn-grid div{
+    display: grid;
 }
 
 .btn {
@@ -101,6 +128,22 @@ body {
     padding: 5px 10px;
     color: black;
     outline: none;
+}
+
+.score-area{
+    background-color: green;
+
+}
+
+.btnCard {
+    display: inline;
+    /*border: 3px dotted black;
+    border-radius: 5px ;
+    color: black;*/
+    padding: 1px;
+    outline: none;
+    max-height: 200px;
+    width: auto;
 }
 
 .btn:hover{
@@ -152,13 +195,15 @@ header {
   padding-bottom: 30;
   padding-left: 0;
   padding-right: 0;
-
 }
 
 
 
 .container{
     text-align: center;
+    width: 800px;
+    max-width: 80%;
+    padding: 10px;
 }
 
 .row {
@@ -202,12 +247,9 @@ ol li::marker {
 }
 
 
-
 ul li{
         list-style-type: none; /*no bullet points anywhere*/
-
 }
-
 
  a {
     text-decoration: none;
@@ -258,11 +300,7 @@ text-align: right;
 }
 
 
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-#map {
-  height: 50%;
-}
+
 
 
 
