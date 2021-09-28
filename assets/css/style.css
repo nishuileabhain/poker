@@ -55,7 +55,7 @@ body {
     padding: 0;
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     justify-content: center;
     align-items: center;
     background-color: lightskyblue;     
@@ -201,8 +201,8 @@ header {
 
 .container{
     text-align: center;
-    width: 800px;
-    max-width: 80%;
+    /*width: 800px;*/
+    max-width: 100%;
     padding: 10px;
 }
 
@@ -304,10 +304,10 @@ text-align: right;
 
 
 
-/* Optional: Makes the sample page fill the window. */
+/* Optional: Makes the sample page fill the window. 
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
+}*/
