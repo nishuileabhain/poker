@@ -31,17 +31,27 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) { //this is the question object as defined below
-  questionElement.innerHTML = question.question //both from below object??
-   console.log(question)
+    questionElement.innerHTML = question.question //both from below object??
+    // console.log(question)
 
-   question.answers.forEach(answer => {
-      const div = document.createElement('div');
-      const img = document.createElement('img')
-      img.src = answer.texty;
+    question.answers.forEach(answer => {
 
-      div.appendChild(img)
-      questionElement.appendChild(div)
-   })
+        const div = document.createElement('div');
+        const img = document.createElement('img')
+        img.src = answer.imagey;//would have been innertext in the text version
+
+        div.appendChild(img)
+        //questionElement.appendChild(div)
+        answerButtonsElement.appendChild(div)
+        //img.classList.add('btnCard') adding the class to the button
+        img.classList.add('btnCard')//should this be added to the div?
+      if (answer.correct) {
+         img.dataset.correct = answer.correct
+         }
+        img.addEventListener('click', selectAnswer)
+     } )//eo foreach
+    }//eo function
+   //)
   // question.answers.forEach(answer => { //built-in forEach() method calls a function once for each element in the answers array
   //   const button = document.createElement('button')//WHY WONT YOU PUT AN IMAGE IN THERE
   //   //let image = document.createElement("img");// that will create the image in your js
@@ -66,8 +76,8 @@ function showQuestion(question) { //this is the question object as defined below
   //   button.addEventListener('click', selectAnswer)
   //   //img.addEventListener('click', selectAnswer)
   //   answerButtonsElement.appendChild(button)
-  // })
-}
+  // })}
+
 
 // for showing the next question, not resetting the whole quiz
 
@@ -120,43 +130,43 @@ function clearStatusClass(element) {
 //let image = document.createElement("img");
 const questionList = [
       {
-    question: 'pick a card q1',
+    question: 'pick ace of hearts',
     answers: [
-      { texty: 'assets/images/pack/10d.png', correct: false },
-      { texty: 'assets/images/pack/ac.png', correct: false },
-      { texty: 'assets/images/pack/9c.png', correct: true },
-      { texty: 'assets/images/pack/2d.png', correct: false },
-      { texty: 'assets/images/pack/as.png', correct: false },
+      { imagey: 'assets/images/pack/10d.png', correct: false },
+      { imagey: 'assets/images/pack/ac.png', correct: false },
+      { imagey: 'assets/images/pack/9c.png', correct: false },
+      { imagey: 'assets/images/pack/2d.png', correct: false },
+      { imagey: 'assets/images/pack/ah.png', correct: true },
     ]
   },
         {
-    question: 'pick a card:2',
+    question: 'click jack of clubs',
     answers: [
-      { texty: 'assets/images/pack/2d.png', correct: false },
-      { texty: 'assets/images/pack/kd.png', correct: false },
-      { texty: 'assets/images/pack/jc.png', correct: true },
-      { texty: 'assets/images/pack/qh.png', correct: false },
-    { texty: 'assets/images/pack/8h.png', correct: false }
+      { imagey: 'assets/images/pack/2d.png', correct: false },
+      { imagey: 'assets/images/pack/kd.png', correct: false },
+      { imagey: 'assets/images/pack/jc.png', correct: true },
+      { imagey: 'assets/images/pack/qh.png', correct: false },
+    { imagey: 'assets/images/pack/8h.png', correct: false }
     ]
   },
   {
-    question: 'pick a card q3',
+    question: 'click 9 of clubs',
     answers: [
-      { texty: 'assets/images/pack/3d.png', correct: false },
-      { texty: 'assets/images/pack/5c.png', correct: false },
-      { texty: 'assets/images/pack/9c.png', correct: true },
-      { texty: 'assets/images/pack/9d.png', correct: false },
-      { texty: 'assets/images/pack/as.png', correct: false },
+      { imagey: 'assets/images/pack/3d.png', correct: false },
+      { imagey: 'assets/images/pack/5c.png', correct: false },
+      { imagey: 'assets/images/pack/9c.png', correct: true },
+      { imagey: 'assets/images/pack/9d.png', correct: false },
+      { imagey: 'assets/images/pack/ac.png', correct: false },
     ]
   },
   {
-    question: 'pick a card q4',
+    question: 'pick queen of clubs',
     answers: [
-      { texty: 'assets/images/pack/5d.png', correct: false },
-      { texty: 'assets/images/pack/ac.png', correct: false },
-      { texty: 'assets/images/pack/qc.png', correct: true },
-      { texty: 'assets/images/pack/3d.png', correct: false },
-      { texty: 'assets/images/pack/js.png', correct: false },
+      { imagey: 'assets/images/pack/5d.png', correct: false },
+      { imagey: 'assets/images/pack/ac.png', correct: false },
+      { imagey: 'assets/images/pack/qc.png', correct: true },
+      { imagey: 'assets/images/pack/3d.png', correct: false },
+      { imagey: 'assets/images/pack/js.png', correct: false },
     ]
   }
   
