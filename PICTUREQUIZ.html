@@ -43,7 +43,6 @@
     
     <!--  quizarea-->
     <div class="quizarea">
-
         <div class="container">
             <div id="question-container" class="hide">
                 <!-- questions and answers contain default text -->
@@ -68,18 +67,53 @@
                     </div>
                 </div>
             </div><!-- EO question-container -->
-
+            <div id="score-buttons" class="hide">
+                <div class="container">
+                    <div class="row">
+                        <div class="column scoreCard">
+                            <img src="assets/images/1book36.jpg" style="width: auto; height: 200px;">
+                            <p class="scores">Correct Answers: <span id="score">0</span></p>
+                        </div>
+                        <div class="column scoreCard">
+                            <img src="assets/images/1book41.jpg" style="width: auto; height: 200px;">
+                            <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="controls">
                 <button id="start-btn" class="start-btn btn"> Start </button>
                 <button id="next-btn" class="next-btn btn hide"> Next </button>
             </div>
+
         </div><!-- EO container-->
 
     </div><!-- EO quizarea-->
 
+<!--  scorearea-->
+<div class="scoresarea">
+    <div class="container">
+        <div id="score-container" class="hide"> 
+            <div id="score-buttons">
+                <div class="container">
+                    <div class="row">
+                        <div class="column scoreCard">
+                            <img src="assets/images/1book36.jpg" style="width: auto; height: 200px;">
+                            <p class="scores">Correct Answers: <span id="score">0</span></p>
+                        </div>
+                        <div class="column scoreCard">
+                            <img src="assets/images/1book41.jpg" style="width: auto; height: 200px;">
+                            <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- EO score-container -->
+    </div><!-- EO container-->
 
-    <div class="container-fluid">
-        <!--full width of screen-->
+</div><!-- EO quizarea-->
+<!--
+    <div class="container-fluid" id="score-area">
         <h3>Scores:</h3>
         <div class="row">
 
@@ -91,10 +125,11 @@
                 <img src="assets/images/1book41.jpg" style="width: auto; height: 200px;">
                 <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
             </div>
-        </div><!--EO row-->
-                        <p>end of container</p>
+        </div>
+                        <h4>end of container</h4>
 
     </div>
+-->
 
     
 

@@ -15,16 +15,20 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: darkslategray;
+    background-color: #69061c;
     color: white;
     text-align: center;
  }
 
- .footer p {
+ .footer p, a {
      text-align: center;
      color: white;
-
  }
+
+ .footer a {
+    text-align: center;
+    color: white;
+}
 
 .title-image {
     /*shadow from https://www.w3schools.com/css/css3_shadows_box.asp*/
@@ -61,6 +65,17 @@ body {
     background-color: lightskyblue;     
 }
 
+.scoresarea{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;    
+}
+
 /*
 #question-container{
     background-color: coral;
@@ -81,14 +96,14 @@ body {
 
 
 /*if I target all divs it works but if I try to only target btn-card it gets overridden with  block
-.answer-buttons div or btn grid do nothing*/
+.answer-buttons div or btn grid do nothing
 .btn-grid div{
 display: inline;
 }
 
 #answer-buttons {
     display: inline;
-}
+}*/
 
 .rulesarea {
     margin: 0;

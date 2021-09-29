@@ -1,6 +1,8 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
+const scoreContainerElement = document.getElementById('score-container')
+
 const questionElement = document.getElementById('questionID')//renamed to show clearly that this is coming from the html page
 //const questionElement = document.getElementById('questionID','imgID')//renamed to show clearly that this is coming from the html page
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -101,11 +103,18 @@ function selectAnswer(e) {
   } else {
     startButton.innerHTML = 'Restart'
     startButton.classList.remove('hide')
+    scoreContainerElement.classList.remove('hide')
+
   }
     if (selectedButton.dataset = correct) {
-        correctAnswers++
+      document.getElementById("questionID").innerHTML = "CORRECT!";
+      //answerButtonsElement.classList.add('hide')
+
+      correctAnswers++
     }
     else{
+        document.getElementById("questionID").innerHTML = "WRONG!";
+        //img.src = "assets/images/wrong.jpg";
         wrongAnswers++
     }
     document.getElementById("score").innerHTML = correctAnswers;
