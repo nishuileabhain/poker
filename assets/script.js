@@ -17,7 +17,7 @@ window.onload = function(){
 
 }
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame)//user clicks start button
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
@@ -45,7 +45,7 @@ function showQuestion(question) { //this is the question object as defined below
     button.innerHTML = answer.texty
     button.classList.add('btn')
     if (answer.correct) {
-      button.dataset.correct = answer.correct    
+      button.dataset.correct = answer.correct// there is no explicit marking as false because its a string not a boolean    
     }
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
