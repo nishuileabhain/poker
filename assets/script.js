@@ -4,18 +4,11 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('questionID')//renamed to show clearly that this is coming from the html page
 //const questionElement = document.getElementById('questionID','imgID')//renamed to show clearly that this is coming from the html page
 const answerButtonsElement = document.getElementById('answer-buttons')
+const responsePic = document.getElementById('responsePic')
 
 let shuffledQuestions, currentQuestionIndex
 let correctAnswers = 0;
 let wrongAnswers = 0;
-
-window.onload = function(){
-
-    image.onmousedown = cardtrick;
-
-    image.onmouseup = cardUntrick;
-
-}
 
 startButton.addEventListener('click', startGame)//user clicks start button
 nextButton.addEventListener('click', () => {
@@ -57,6 +50,7 @@ function showQuestion(question) { //this is the question object as defined below
 function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
+  responsePic.classList.add('hide')
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
@@ -70,6 +64,7 @@ function selectAnswer(e) {
     setStatusClass(button, button.dataset.correct)
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    responsePic.classList.remove('hide')
     nextButton.classList.remove('hide')
   } else {
     startButton.innerHTML = 'Restart'
@@ -79,6 +74,7 @@ function selectAnswer(e) {
         correctAnswers++
     }
     else{
+      responsePic.src = "assets/images/wrong.jpg";
         wrongAnswers++
     }
     document.getElementById("score").innerHTML = correctAnswers;
