@@ -11,6 +11,8 @@ body {
 
 .footer {
     /*footer modified from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_footer*/
+    padding-top: 20px;
+    margin-top: 20px;
     position: static;
     left: 0;
     bottom: 0;
@@ -44,7 +46,6 @@ body {
     #questionID{
         font-size: large;
         font-weight: bolder;
-        color: pink;
         padding: 20px 10px 30px 10px;
     }
 
@@ -62,7 +63,7 @@ body {
     height: 50vh;
     justify-content: center;
     align-items: center;
-    background-color: lightskyblue;     
+    /*background-color: lightskyblue;    */ 
 }
 
 .scoresarea{
@@ -113,7 +114,7 @@ display: inline;
     height: auto;
     justify-content: center;
     align-items: center;
-    background-color: red;     
+    /*background-color: red;    */ 
 }
 .rules-container {
     width: 800px;
@@ -144,11 +145,11 @@ display: inline;
     color: black;
     outline: none;
 }
-
+/*
 .score-area{
     background-color: green;
 
-}
+}*/
 
 .btnCard {
     display: inline;
@@ -319,10 +320,10 @@ text-align: right;
 
 
 
-/* Optional: Makes the sample page fill the window. 
+/* Optional: Makes the sample page fill the window. */
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-}*/
+}
