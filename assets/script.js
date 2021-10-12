@@ -5,6 +5,8 @@ const questionElement = document.getElementById('questionID')//renamed to show c
 //const questionElement = document.getElementById('questionID','imgID')//renamed to show clearly that this is coming from the html page
 const answerButtonsElement = document.getElementById('answer-buttons')
 const responsePic = document.getElementById('responsePic')
+const responseText = document.getElementById('responseText')
+
 
 let shuffledQuestions, currentQuestionIndex
 let correctAnswers = 0;
@@ -51,6 +53,10 @@ function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
   responsePic.classList.add('hide')
+  responseText.classList.add('hide')
+  responsePic.src = "assets/images/correct.jpg";
+  responseText.innerHTML = "CORRECT!"
+
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
@@ -63,8 +69,10 @@ function selectAnswer(e) {
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
+  responsePic.classList.remove('hide')
+  responseText.classList.remove('hide')
+
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    responsePic.classList.remove('hide')
     nextButton.classList.remove('hide')
   } else {
     startButton.innerHTML = 'Restart'
@@ -75,6 +83,8 @@ function selectAnswer(e) {
     }
     else{
       responsePic.src = "assets/images/wrong.jpg";
+      responseText.innerHTML = 'WRONG!'
+
         wrongAnswers++
     }
     document.getElementById("score").innerHTML = correctAnswers;
