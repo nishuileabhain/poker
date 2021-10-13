@@ -52,7 +52,7 @@ function showQuestion(question) { //this is the question object as defined below
 // for showing the next question, not resetting the whole quiz
 
 function resetState() {
-  clearStatusClass(document.body)
+  //clearStatusClass(document.body)
   nextButton.classList.add('hide')
   responsePic.classList.add('hide')
   responseText.classList.add('hide')
@@ -68,8 +68,9 @@ function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct //correct is set as a string rather than a boolean
   setStatusClass(document.body, correct)
+  selectedButton.classList.add('selectedButton')
   Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct)
+    setStatusClass(button, button.dataset.correct)//changes button colours
   })
   responsePic.classList.remove('hide')
   responseText.classList.remove('hide')
@@ -86,23 +87,26 @@ function selectAnswer(e) {
 
   }
     if (selectedButton.dataset = correct) {
+        selectedButton.classList.add('correct')
         correctAnswers++
         console.log("correct answers is now "+correctAnswers)
 
     }
     else{
+      selectedButton.classList.add('wrong')
       responsePic.src = "assets/images/wrong.jpg";
       responseText.innerHTML = 'WRONG!'
       console.log("correct answers is still only "+correctAnswers)
     }
 }
 
+//turns all the buttons red except for the correct answer
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct')
-  } else {
-    element.classList.add('wrong')
+  //} else {
+    //element.classList.add('wrong')
   }
 }
 
