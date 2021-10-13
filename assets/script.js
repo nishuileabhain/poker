@@ -6,11 +6,11 @@ const questionElement = document.getElementById('questionID')//renamed to show c
 const answerButtonsElement = document.getElementById('answer-buttons')
 const responsePic = document.getElementById('responsePic')
 const responseText = document.getElementById('responseText')
+const finalScore = document.getElementById('finalScore')
 
 
 let shuffledQuestions, currentQuestionIndex
 let correctAnswers = 0;
-let wrongAnswers = 0;
 
 startButton.addEventListener('click', startGame)//user clicks start button
 nextButton.addEventListener('click', () => {
@@ -23,7 +23,7 @@ function startGame() {
   shuffledQuestions = questionList.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
     correctAnswers = 0; //maybe specify if curr quest index is zero
-    wrongAnswers = 0;
+    console.log("correct answers is "+correctAnswers)
   questionContainerElement.classList.remove('hide') //once the start button it clicked it will disappear
   setNextQuestion()
 }
@@ -77,18 +77,20 @@ function selectAnswer(e) {
   } else {
     startButton.innerHTML = 'Restart'
     startButton.classList.remove('hide')
+    finalScore.classList.remove('hide')
+    finalScore.innerText+correctAnswers
+
   }
     if (selectedButton.dataset = correct) {
         correctAnswers++
+        console.log("correct answers is now "+correctAnswers)
+
     }
     else{
       responsePic.src = "assets/images/wrong.jpg";
       responseText.innerHTML = 'WRONG!'
-
-        wrongAnswers++
+      console.log("correct answers is still only "+correctAnswers)
     }
-    document.getElementById("score").innerHTML = correctAnswers;
-    document.getElementById("incorrect").innerHTML = wrongAnswers;
 }
 
 function setStatusClass(element, correct) {
@@ -162,14 +164,13 @@ function incrementScore() {
     // Gets the current score from the DOM and increments it
 
     let oldScore = parseInt(document.getElementById("score").innerHTML);
-    document.getElementById("score").innerHTML = correctAnswers;
+    //document.getElementById("score").innerHTML = correctAnswers;
 }
 
 function incrementWrongAnswer() {
     // Gets the current tally of incorrect answers from the DOM and increments it
 
     let oldScore = parseInt(document.getElementById("incorrect").innerHTML);
-    document.getElementById("incorrect").innerHTML = wrongAnswers;
 }
 
 function showCard() {
