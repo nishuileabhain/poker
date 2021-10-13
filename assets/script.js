@@ -20,6 +20,8 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
   startButton.classList.add('hide')
+  finalScore.classList.add('hide')
+
   shuffledQuestions = questionList.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
     correctAnswers = 0; //maybe specify if curr quest index is zero
@@ -78,7 +80,9 @@ function selectAnswer(e) {
     startButton.innerHTML = 'Restart'
     startButton.classList.remove('hide')
     finalScore.classList.remove('hide')
-    finalScore.innerText+correctAnswers
+    //finalScore.innerText+correctAnswers
+    finalScore.innerHTML = "You got "+correctAnswers+" right!";
+
 
   }
     if (selectedButton.dataset = correct) {
