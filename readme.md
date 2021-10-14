@@ -2,7 +2,7 @@
 
 [View the live project here.](https://nishuileabhain.github.io/poker/index.html)
 
-This is a site to halp people learn to play poker. It is designed to be responsibe and accessible on a range of devices.
+This is a site to help people learn to play poker. It is designed to be responsibe and accessible on a range of devices.
 
 <h2 align="center"><img src="assets/images/1book36.jpg"></h2>
 
@@ -11,28 +11,24 @@ This is a site to halp people learn to play poker. It is designed to be responsi
 -   ### User stories
 
     -   #### First Time Visitor Goals
+        1. As a First Time Visitor, I want to easily understand the main purpose of the site.
+        1. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
+        1. As a First Time Visitor, I want to easily understand the poker rules from the shown examples
+        1. As a First Time Visitor, I want to easily understand the feedback given in the quiz
+        1. As a First Time Visitor, I want to be made aware of free online options for playing poker as a beginner player
 
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-        2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
 
     -   #### Returning Visitor Goals
-
-        1. As a Returning Visitor, I want to find information about coding challenges.
-        2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-        3. As a Returning Visitor, I want to find community links.
-
-    -   #### Frequent User Goals
-        1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-        2. As a Frequent User, I want to check to see if there are any new blog posts.
-        3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
+        1. As a Returning Visitor, I want to quickly find the rules to refresh my knowledge
+        1. As a Returning Visitor, I want to quickly find the quiz to test my knowledge
+        1. As a Returning Visitor, I want to find the best way to get in contact with the website owner.
+        1. As a Returning Visitor, I want to find useful external links.
 
 -   ### Design
     -   #### Colour Scheme
         -   The main colours used are black, white and red, taking inspiration from a traditional deck of playing cards. Other colours typical of publishing in the victorian era are used throughout the site, such as navy and wine. The backgrounds of the cards are an off-white of cream colour to resemble paper playing cards.
     -   #### Typography
-        -   The Alice font is the main font used throughout the whole website /////with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.////
-        The fonts were chosen in keeping with a Victorian era aesthetic to match with the theme of Alice in Wonderland, written by Lewis Carroll in 1865.
+        -   The Alice font is the main font used throughout the whole website with Garamond or failing that any Serif font as the fallback in case of any issue importing the font to the site. The fonts were chosen in keeping with a Victorian era aesthetic to match with the theme of Alice in Wonderland, written by Lewis Carroll in 1865.
     -   #### Imagery
         -   Original illustrations from the novel by John Tenniel are used throughout. The fact that it is inspired by a children's book with a female protagonist is intended to create a humourous and friendly quality, in contrast with the machismo often associated with card games.
         -   For the deck of cards a traditional Victorian style deck was used, to match the theme
@@ -62,23 +58,29 @@ This is a site to halp people learn to play poker. It is designed to be responsi
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-    - Bootstrap was used to assist with the responsiveness and styling of the website.
-1. [Hover.css:](https://ianlunn.github.io/Hover/)
-    - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
+   - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
+   - Google fonts were used to import the 'Alice' font into the style.css file which is used on all pages throughout the project.
 1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
-1. [jQuery:](https://jquery.com/)
-    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
+   - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [Git](https://git-scm.com/)
-    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+   - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
-    - GitHub is used to store the projects code after being pushed from Git.
-1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
-    - Photoshop was used to create the logo, resizing images and editing photos for the website.
+   - GitHub is used to store the project code after being pushed from Git.
+1. [TinyPNG:](https://tinypng.com/)
+   - TinyPNG was used to compress images.
 1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
+   - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
+1. [CSS Validation Service:](https://jigsaw.w3.org/css-validator/)
+   - CSS validation service was used to check CSS code.
+1. [HTML Markup Validation Service:](https://validator.w3.org/)
+   - HTML validation service was used to check HTML code
+1. [W3 Schools:](https://w3schools.com/)
+   - W3Schools was consulted extensively throughout the project when implementing features in all languages used.
+1. [Chrome developer tools:](https://developers.google.com/web/tools/chrome-devtools)
+   - Used throughout development for troubleshooting and debugging 
+1. [JS Fiddle:](https://jsfiddle.net)
+   - Used to test combinations of css classes and javascript.
 
 ## Testing
 
