@@ -115,7 +115,11 @@ text-align: right;
     box-shadow: 0 0 10px 2px;
 }
 
-.rulesarea {
+#hands img{
+    width: 100%; height: auto;
+}
+
+.rulesarea {/*used in index page also*/
     margin: 0;
     padding: 0;
     display: flex; /*without this it will not centre the rules container*/
@@ -125,7 +129,7 @@ text-align: right;
     align-items: center;
     /*background-color: red;    */ 
 }
-.rules-container {
+.rules-container {/*used in index page also*/
     width: 800px;
     max-width: 80%;
     background-color: white;
@@ -137,8 +141,26 @@ text-align: right;
 .rules-container h2 {
     text-align: left;
 }
+/*
+hr {
+    background-color: #cc0000;
+    width: 95%;
+    height: 0.5px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 
+}
 
+.hands {
+    margin-bottom: 30px; 
+    background-color: blueviolet;
+    border: 1px solid red; 
+    padding: 35px;
+       line-height: 3;
+        margin-bottom: 20px;
+margin-bottom: 3px; 
+    
+}*/
 
 /*styles for QUIZ page*/
 
@@ -151,7 +173,8 @@ text-align: right;
 .btn-grid div {
     display: grid;
     display: inline !important;
-    grid-template-columns: repeat(5); /*five columns*/
+    /*grid-template-columns: repeat(5); five columns*/
+    grid-template-columns:auto;
     gap: 10px;
     margin: 20px 0;
 }
@@ -231,7 +254,7 @@ header {
   min-width: 20%;
   width: 20%;
   height:auto;
-  padding-bottom: 30;
+  padding-bottom: 30px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -259,25 +282,7 @@ header {
   display: table;
 }
 
-hr {
-    background-color: #cc0000;
-    width: 95%;
-    height: 0.5px;
-    margin-top: 10px;
-    margin-bottom: 30px;
 
-}
-
-.hands {
-    margin-bottom: 30px; 
-    background-color: blueviolet;
-    border: 1px solid red; 
-    padding: 35px;
-       /*line-height: 3;
-        margin-bottom: 20px;
-margin-bottom: 3px; 
-    */
-}
 
 
 
