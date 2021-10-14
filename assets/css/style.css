@@ -118,7 +118,7 @@ text-align: right;
 }
 
 #hands img{
-    width: 100%; height: auto;
+    width: 95%; height: auto;
 }
 
 .rulesarea {/*used in index page also*/
@@ -174,31 +174,19 @@ margin-bottom: 3px;
 
 .btn-grid div {
     display: grid;
-    display: inline !important;
-    /*grid-template-columns: repeat(5); five columns*/
     grid-template-columns:auto;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.btn-grid div{
-    display: grid;
 }
 
 .btn {
-    background-color: goldenrod;
+    background-color: rgb(196, 174, 121);
     border: 2px solid black;
     border-radius: 5px ;
     padding: 5px 10px;
     color: black;
-    outline: none;
 }
 
 .btnCard {
     display: inline;
-    /*border: 3px dotted black;
-    border-radius: 5px ;
-    color: black;*/
     padding: 1px;
     outline: none;
     max-height: 200px;
@@ -292,13 +280,18 @@ header {
 /* change depending on whether answer is correct. */
 
 .btn.correct {
-    background-color: rgb(136, 148, 93)
+    background-color: green;
 }
 
 .btn.wrong{
-    background-color: rgb(216, 74, 102);
+    background-color: red;
 }
 
+.btn.missed{
+    font-style: italic;
+    border: 5px solid green;
+    opacity: 0.3;
+}
 
 
 /* Optional: Makes the sample page fill the window. */

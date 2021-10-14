@@ -1,8 +1,7 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('questionID')//renamed to show clearly that this is coming from the html page
-//const questionElement = document.getElementById('questionID','imgID')//renamed to show clearly that this is coming from the html page
+const questionElement = document.getElementById('questionID')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const responsePic = document.getElementById('responsePic')
 const responseText = document.getElementById('responseText')
@@ -12,21 +11,21 @@ const finalScore = document.getElementById('finalScore')
 let shuffledQuestions, currentQuestionIndex
 let correctAnswers = 0;
 
-startButton.addEventListener('click', startGame)//user clicks start button
+startButton.addEventListener('click', startGame) //user clicks start button
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
 
 function startGame() {
-  startButton.classList.add('hide')
+  startButton.classList.add('hide')//start button and score are hidden until the end
   finalScore.classList.add('hide')
 
   shuffledQuestions = questionList.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
-    correctAnswers = 0; //maybe specify if curr quest index is zero
-    console.log("correct answers is "+correctAnswers)
-  questionContainerElement.classList.remove('hide') //once the start button it clicked it will disappear
+    correctAnswers = 0;
+    //console.log("correct answers is "+correctAnswers)
+  questionContainerElement.classList.remove('hide') //after the start button is clicked it will disappear
   setNextQuestion()
 }
 
@@ -36,13 +35,13 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) { //this is the question object as defined below
-  questionElement.innerHTML = question.question //both from below object??
+  questionElement.innerHTML = question.question
   question.answers.forEach(answer => { //built-in forEach() method calls a function once for each element in the answers array
     const button = document.createElement('button')
     button.innerHTML = answer.texty
     button.classList.add('btn')
     if (answer.correct) {
-      button.dataset.correct = answer.correct// there is no explicit marking as false because its a string not a boolean    
+      button.dataset.correct = answer.correct
     }
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
@@ -66,12 +65,13 @@ function resetState() {
 
 function selectAnswer(e) {
   const selectedButton = e.target
-  const correct = selectedButton.dataset.correct //correct is set as a string rather than a boolean
-  setStatusClass(document.body, correct)
+  const correct = selectedButton.dataset.correct
+  //setStatusClass(document.body, correct)
   selectedButton.classList.add('selectedButton')
-  Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct)//changes button colours
-  })
+  //Array.from(answerButtonsElement.children).forEach(button => {
+  //  setStatusClass(button, button.dataset.correct)//changes button colours
+ // })
+
   responsePic.classList.remove('hide')
   responseText.classList.remove('hide')
 
@@ -81,34 +81,37 @@ function selectAnswer(e) {
     startButton.innerHTML = 'Restart'
     startButton.classList.remove('hide')
     finalScore.classList.remove('hide')
-    //finalScore.innerText+correctAnswers
     finalScore.innerHTML = "You got "+correctAnswers+" right!";
-
-
   }
     if (selectedButton.dataset = correct) {
         selectedButton.classList.add('correct')
         correctAnswers++
-        console.log("correct answers is now "+correctAnswers)
+        //console.log("correct answers is now "+correctAnswers)
 
     }
     else{
       selectedButton.classList.add('wrong')
       responsePic.src = "assets/images/wrong.jpg";
       responseText.innerHTML = 'WRONG!'
-      console.log("correct answers is still only "+correctAnswers)
+      //console.log("correct answers is still only "+correctAnswers)
+      Array.from(answerButtonsElement.children).forEach(button => {
+          if(button.dataset.correct)//changes button colours
+          {button.classList.add('missed')}
+        })
     }
 }
 
-//turns all the buttons red except for the correct answer
-function setStatusClass(element, correct) {
-  clearStatusClass(element)
-  if (correct) {
-    element.classList.add('correct')
-  //} else {
-    //element.classList.add('wrong')
-  }
-}
+//turns all the buttons colours depending whether they are correct
+//function setStatusClass(element, correct) {
+ // clearStatusClass(element)
+  //if (correct) {
+  //  element.classList.add('correct')
+ // } //else {
+    
+    //element.classList.add('alsoWrong')
+
+  //}
+//}
 
 function clearStatusClass(element) {
   element.classList.remove('correct')
@@ -124,7 +127,7 @@ const questionList = [
       { texty: 'Jack of Diamonds', correct: false },
       { texty: 'Nine of Hearts', correct: true },
       { texty: 'Ace of Spades', correct: false },
-        { texty: 'Ace of Spades', correct: false }
+        { texty: 'King of Spades', correct: false }
     ]
   },
         {
@@ -168,43 +171,9 @@ const questionList = [
   
 ] //EO questions list
 
-function incrementScore() {
-    // Gets the current score from the DOM and increments it
-
-    let oldScore = parseInt(document.getElementById("score").innerHTML);
-    //document.getElementById("score").innerHTML = correctAnswers;
-}
-
-function incrementWrongAnswer() {
-    // Gets the current tally of incorrect answers from the DOM and increments it
-
-    let oldScore = parseInt(document.getElementById("incorrect").innerHTML);
-}
-
-function showCard() {
-    
-    var diamondAce = document.getElementById("image");
-    diamondAce.src = "assets/images/pack/ad.png";
-}
-
-function cardtrick() {
-    
-    var diamondAce = document.getElementById("image");
-    diamondAce.src = "assets/images/pack/ad.png";
-}
-
-function cardUntrick() {
-    
-    var clubAce = document.getElementById("image");
-    clubAce.src = "assets/images/pack/ac.png";
-}
 
 
-let map;
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
-}
+
+
+
