@@ -11,7 +11,67 @@ body {
     text-align: center;
 }
 
-/* footer style*/
+.title-image {
+    /*shadow from https://www.w3schools.com/css/css3_shadows_box.asp*/
+    border-radius: 5%;
+    padding: 20px;
+    width: 25%;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    }
+
+/* NAVBAR */
+ol li::marker {
+    display: list-item;
+    font-size: 1.5em;
+    color: red;
+    font-weight: bold;
+}
+
+ul li{
+        list-style-type: none; /*no bullet points anywhere*/
+}
+
+ a {
+    text-decoration: none;
+    color:slategray;
+}
+
+.bi-suit-heart-fill, .bi-suit-diamond-fill {
+ color: red;
+}
+
+.bi-suit-spade-fill, .bi-suit-club-fill {
+ color: black;
+}
+
+.navbar {
+color: slategray;
+background-color:inherit;
+font-family: 'Alice', serif;
+letter-spacing: 5px;
+float: right;
+text-align: right;
+}
+
+.navbar a:hover i {
+    color: white;
+}
+
+
+.navbar .active {
+    text-transform: uppercase;
+    font-size: 150%;
+}
+
+ .active i {
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+/* FOOTER */
 .footer {
     /*footer modified from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_footer*/
     padding-top: 20px;
@@ -25,38 +85,19 @@ body {
     text-align: center;
  }
 
- /*.footer p {
-     text-align: center;
-     color: white;
- }*/
-
  .footer a {
     color: inherit;/*by default links are grey as in the navbar*/
 }
 
-.title-image {
-    /*shadow from https://www.w3schools.com/css/css3_shadows_box.asp*/
-    border-radius: 5%;
-    padding: 20px;
-    width: 25%;
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: white;
-    }
-
-    #questionID{
-        font-size: large;
-        font-weight: bolder;
-        padding: 20px 10px 30px 10px;
-    }
-
+/*styles for INDEX page*/
 #intro p
 {
     text-align: center;
-    justify-content: center;
-
+    justify-content: center;    
 }
+
+/*styles for RULES page*/
+
 .quizarea{
     margin: 0;
     padding: 0;
@@ -65,15 +106,9 @@ body {
     height: 50vh;
     justify-content: center;
     align-items: center;
-    /*background-color: lightskyblue;    */ 
 }
 
 .quizarea .container {
-    /*display: inline;
-    width: 800px;
-    border-radius: 5px;
-
-    */
     max-width: 90%;
     background-color: white;
     padding: 10px;
@@ -83,7 +118,7 @@ body {
 .rulesarea {
     margin: 0;
     padding: 0;
-    display: flex; /*without this it will not center the rules container*/
+    display: flex; /*without this it will not centre the rules container*/
     width: 100vw;
     height: auto;
     justify-content: center;
@@ -99,7 +134,21 @@ body {
     box-shadow: 0 0 10px 2px;
 }
 
-.btn-grid div{
+.rules-container h2 {
+    text-align: left;
+}
+
+
+
+/*styles for QUIZ page*/
+
+#questionID {
+    font-size: large;
+    font-weight: bolder;
+    padding: 20px 10px 30px 10px;
+}
+
+.btn-grid div {
     display: grid;
     display: inline !important;
     grid-template-columns: repeat(5); /*five columns*/
@@ -160,16 +209,17 @@ body {
 
 
 
+/*styles for RESOURCES page*/
 
-.rules-container h2 {
-    text-align: left;
+/* for consistency the rules container was reused in the resources page
+     so an id was used to override the text aligmnent*/
+#resources {
+    text-align: center;
 }
 
 h1, h2 {
-   color: red; 
+    color: red; 
     letter-spacing: 5px;
-
-
 }
 
 header {
@@ -229,57 +279,7 @@ margin-bottom: 3px;
     */
 }
 
-/* styles for navbar */
 
-ol li::marker {
-    display: list-item;
-    font-size: 1.5em;
-    color: red;
-    font-weight: bold;
-}
-
-
-ul li{
-        list-style-type: none; /*no bullet points anywhere*/
-}
-
- a {
-    text-decoration: none;
-    color:slategray;
-}
-
-
-.bi-suit-heart-fill, .bi-suit-diamond-fill {
- color: red;
-}
-
-.bi-suit-spade-fill, .bi-suit-club-fill {
- color: black;
-}
-
-.navbar {
-color: slategray;
-background-color:inherit;
-font-family: 'Alice', serif;
-letter-spacing: 5px;
-float: right;
-text-align: right;
-}
-
-.navbar a:hover i {
-    color: white;
-}
-
-
-.navbar .active {
-    text-transform: uppercase;
-    font-size: 150%;
-}
-
- .active i {
-    color: white;
-    text-shadow: 2px 2px black;
-}
 
 
 /* change depending on whether answer is correct. */
