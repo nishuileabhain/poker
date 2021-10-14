@@ -38,7 +38,7 @@ ul li{
 
  a {
     text-decoration: none;
-    color:slategray;
+    color:inherit;
 }
 
 .bi-suit-heart-fill, .bi-suit-diamond-fill {
@@ -50,7 +50,7 @@ ul li{
 }
 
 .navbar {
-color: slategray;
+color: DarkSlateGray;
 background-color:inherit;
 font-family: 'Alice', serif;
 letter-spacing: 5px;
