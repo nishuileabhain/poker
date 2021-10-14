@@ -2,7 +2,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 
 body {
-    font-family: 'Alice', serif;
+    font-family: 'Alice', Garamond, serif;
     font-weight: 300;
     background-color: #f2eecb;
     color: black;
@@ -66,17 +66,6 @@ body {
     /*background-color: lightskyblue;    */ 
 }
 
-.scoresarea{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    width: 100vw;
-    height: 30vh;
-    justify-content: center;
-    align-items: center;
-    background-color: yellow;    
-}
-
 
 /*#question-container{
     background-color: coral;
@@ -86,7 +75,7 @@ body {
 .quizarea .container {
     /*display: inline;
     width: 800px;
-        border-radius: 5px;
+    border-radius: 5px;
 
     */
     max-width: 90%;
@@ -94,17 +83,6 @@ body {
     padding: 10px;
     box-shadow: 0 0 10px 2px;
 }
-
-
-/*if I target all divs it works but if I try to only target btn-card it gets overridden with  block
-.answer-buttons div or btn grid do nothing
-.btn-grid div{
-display: inline;
-}
-
-#answer-buttons {
-    display: inline;
-}*/
 
 .rulesarea {
     margin: 0;
@@ -145,11 +123,6 @@ display: inline;
     color: black;
     outline: none;
 }
-/*
-.score-area{
-    background-color: green;
-
-}*/
 
 .btnCard {
     display: inline;
@@ -259,6 +232,8 @@ margin-bottom: 3px;
     */
 }
 
+/* styles for navbar */
+
 ol li::marker {
     display: list-item;
     font-size: 1.5em;
@@ -310,6 +285,7 @@ text-align: right;
 }
 
 
+/* change depending on whether answer is correct. */
 
 .btn.correct {
     background-color: rgb(136, 148, 93)
@@ -318,9 +294,6 @@ text-align: right;
 .btn.wrong{
     background-color: rgb(216, 74, 102);
 }
-
-
-
 
 
 
