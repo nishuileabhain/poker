@@ -290,7 +290,6 @@ header {
 .btn.missed{
     font-style: italic;
     border: 5px solid green;
-    opacity: 0.3;
 }
 
 

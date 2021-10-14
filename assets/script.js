@@ -52,7 +52,7 @@ function showQuestion(question) { //this is the question object as defined below
 // for showing the next question, not resetting the whole quiz
 
 function resetState() {
-  //clearStatusClass(document.body)
+  clearStatusClass(document.body)
   nextButton.classList.add('hide');
   responsePic.classList.add('hide');
   responseText.classList.add('hide');
@@ -67,11 +67,10 @@ function resetState() {
 function selectAnswer(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
-  //setStatusClass(document.body, correct)
   selectedButton.classList.add('selectedButton');
-  //Array.from(answerButtonsElement.children).forEach(button => {
-  //  setStatusClass(button, button.dataset.correct)//changes button colours
-  // })
+  Array.from(answerButtonsElement.children).forEach(button => {
+    setStatusClass(button, button.dataset.correct)//changes button colours
+   })
 
   responsePic.classList.remove('hide');
   responseText.classList.remove('hide');
@@ -84,7 +83,7 @@ function selectAnswer(e) {
     finalScore.classList.remove('hide');
     finalScore.innerHTML = "You got " + correctAnswers + " right!";
   }
-  if (selectedButton.dataset == correct) {
+  if (selectedButton.dataset = correct) {// this does not work if == is used
     selectedButton.classList.add('correct');
     correctAnswers++;
     //console.log("correct answers is now "+correctAnswers)
@@ -94,31 +93,21 @@ function selectAnswer(e) {
     responsePic.src = "assets/images/wrong.jpg";
     responseText.innerHTML = 'WRONG!';
     //console.log("correct answers is still only "+correctAnswers)
-    Array.from(answerButtonsElement.children).forEach(button => {
-      if (button.dataset.correct); //changes button colours
-      {
-        button.classList.add('missed');
-      }
-    });
   }
 }
 
 //turns all the buttons colours depending whether they are correct
-//function setStatusClass(element, correct) {
- // clearStatusClass(element)
-  //if (correct) {
-  //  element.classList.add('correct')
- // } //else {
-    
-    //element.classList.add('alsoWrong')
+function setStatusClass(element, correct) {
+  clearStatusClass(element)
+  if (correct) {
+    element.classList.add('correct')
+  }
+}
 
-  //}
-//}
-
-//function clearStatusClass(element) {
-//  element.classList.remove('correct');
-//  element.classList.remove('wrong');
-//}
+function clearStatusClass(element) {
+  element.classList.remove('correct');
+  element.classList.remove('wrong');
+}
 
 //array of question elements
 const questionList = [
