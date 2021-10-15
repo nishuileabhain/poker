@@ -96,8 +96,6 @@ a {
     padding-right: 0;
 }
 
-
-
 .container {
     text-align: center;
     /*width: 800px;*/
@@ -215,14 +213,6 @@ a {
     padding: 5px 10px;
 }
 
-/*
-.btnCard {
-    display: inline;
-    padding: 1px;
-    outline: none;
-    max-height: 200px;
-    width: auto;
-}*/
 
 .btn:hover {
     border-color: royalblue;
