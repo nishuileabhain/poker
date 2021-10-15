@@ -1,14 +1,6 @@
 # Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [Wave](https://wave.webaim.org/) - [Results](https://github.com/)
--   [Chrome developer tools:](https://developers.google.com/web/tools/chrome-devtools)
-   - Used throughout development for troubleshooting and debugging 
--   [JS Hint:](https://jshint.com/)
-   - Used to validate javascript code.
+## Manual Testing
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -40,7 +32,19 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 1. As a Returning Visitor, I want to find useful external links.
     1. After a few attempts at the quiz and becoming familiar with the rules, the resources page can be easily found from the navbar and the index page.
 
-## CSS validator
+## Automated Testing
+
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+-   [Wave](https://wave.webaim.org/) - [Results](https://github.com/)
+-   [Chrome developer tools:](https://developers.google.com/web/tools/chrome-devtools)
+   - Used throughout development for troubleshooting and debugging 
+-   [JS Hint:](https://jshint.com/)
+   - Used to validate javascript code.
+
+### CSS validator
 
 ![CSS Validator feedback](/readme/testing/cssval.png)
 
@@ -48,7 +52,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 * The grid-template-columns gave an error. On manual testing I did not find any difference to the UI when changing ‘repeat(5)’ to ‘auto’, which was listed as a valid option on W3Schools
 
 
-## Google Devtools
+### Google Devtools
 
 ![Uncaught Type Error](/workspace/poker/readme/testing/uncaughttyperesources.png)
 * On resources.html no issue was apparent from usage but an error said
@@ -63,50 +67,47 @@ However javascript is not used on that page at all so the link to the script was
 ![Uncaught Type Error](/readme/testing/manifestsyntaxerror.png)
 * On index.html various errors appear regarding the site.manifest file imported from the favicon feature. This works in initial gitpod previewing but gives an error on the deployed version and seems to be an authentication issue. It has been noted as a known bug in this project. 
 
-## JSHINT
+### JSHINT
 * added missing semicolons to many lines of code, most of them were missing
 * added a comment to say that ES6 features were in use so JSHint was able to ignore them
 * changed .5 to .05 on line 25 for ease of readability ( shuffledQuestions = questionList.sort(() => Math.random() - 0.5);)
 * removed an unused function (clearstatus) that had been in the original quiz tutorial but that I had since replaced with my own code, but on later manual testing testing I decided to replace it.
 
-## Markup Validation Service
+### Markup Validation Service
 
-### index.html
+#### index.html
 ![HTML Validator feedback](/readme/testing/markupindex.png)
 * replaced a closing div tag with a closing nav tag
 * added alt attribute to an image. The image is dynamic so describes this in the tag.
 
-### rules.html
+#### rules.html
 ![HTML Validator feedback](/readme/testing/markuprules.png)
 * moved a div tag inside of a list item
 
-### QuizGame.html
+#### QuizGame.html
 ![HTML Validator feedback](/readme/testing/markupquiz.png)
 * added alt tag to a new header image element
 
-### resources.html
+#### resources.html
 * no errors found
 
-## Wave Web Accessibility Evaluation Tool
+### Wave Web Accessibility Evaluation Tool
 
 * For all Pages I changed navbar text colour from slategrey to darkslategrey because of contrast errors
 * For QuizGame.html only I changed a H3 heading to H2 in so there is not a jump from h1 to h3
 * For index.html there is a warning for a long alt tag that was mentioned above that I kept
 
-## Lighthouse
+### Lighthouse
 
-### index.html
-![HTML Validator feedback](/readme/testing/LHindexDT.png)
-![HTML Validator feedback](/readme/testing/LHindexMOB.png)
+#### Desktop
+* Home Page Report - [View](/readme/testing/LHindexDT.png)
+* Rules Page Report - [View](/readme/testing/LHrulesMOB.png)
+* Quiz Page Report - [View](/readme/testing/LHquizDT.png)
+* Resources Page Report - [View](/readme/testing/LHresourcesDT.png)
 
-### rules.html
-![HTML Validator feedback](/readme/testing/LHrulesDT.png)
-![HTML Validator feedback](/readme/testing/LHrulesMOB.png)
+#### Mobile
+* Home Page Report - [View](/readme/testing/LHindexMOB.png)
+* Rules Page Report - [View](/readme/testing/LHrulesDT.png)
+* Quiz Page Report - [View](/readme/testing/LHquizMOB.png)
+* Resources Page Report - [View](/readme/testing/LHresourcesMOB.png)
 
-### QuizGame.html
-![HTML Validator feedback](/readme/testing/LHquizDT.png)
-![HTML Validator feedback](/readme/testing/LHquizMOB.png)
-
-### resources.html
-![HTML Validator feedback](/readme/testing/LHresourcesDT.png)
-![HTML Validator feedback](/readme/testing/LHresourcesMOB.png)
