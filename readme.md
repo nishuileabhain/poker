@@ -29,17 +29,28 @@ This is a site to help people learn to play poker. It is designed to be responsi
         -   The main colours used are black, white and red, taking inspiration from a traditional deck of playing cards. Other colours typical of publishing in the victorian era are used throughout the site, such as navy and wine. The backgrounds of the cards are an off-white of cream colour to resemble paper playing cards.
     -   #### Typography
         -   The Alice font is the main font used throughout the whole website with Garamond or failing that any Serif font as the fallback in case of any issue importing the font to the site. The fonts were chosen in keeping with a Victorian era aesthetic to match with the theme of Alice in Wonderland, written by Lewis Carroll in 1865.
+        - The IM Fell English font is a more ornate serif style used for large buttons
     -   #### Imagery
         -   Original illustrations from the novel by John Tenniel are used throughout. The fact that it is inspired by a children's book with a female protagonist is intended to create a humourous and friendly quality, in contrast with the machismo often associated with card games.
         -   For the deck of cards a traditional Victorian style deck was used, to match the theme
 
 *   ### Wireframes
 
-    -   Home Page Wireframe - [View](https://github.com/)
+    -   Home Page Wireframe - [View](https://share.balsamiq.com/c/pA9j4CoRpZvkjvTnCo7e2g.png/)
 
-    -   Mobile Wireframe - [View](https://github.com/)
+    -   Rules Page Wireframe - [View](https://share.balsamiq.com/c/jKbsu2veRaWUMBRGtoFMPz.png/)
 
-    -   Contact Us Page Wireframe - [View](https://github.com/)
+    -   Quiz Page Wireframe - [View](https://share.balsamiq.com/c/YFQpcuCKqYHLUSaosWB4u.png/)
+
+    -   Resources Page Wireframe - [View](https://share.balsamiq.com/c/jKbsu2veRaWUMBRGtoFMPz.png/)
+
+    -   Home Page Wireframe Mobile- - [View](https://share.balsamiq.com/c/6eU3WDDXkJWYg7oRCSzVy9.png/)
+
+    -   Rules Page Wireframe Mobile- - [View](https://share.balsamiq.com/c/dU5tno3YntfVdc2Erm8Z9.png/)
+
+    -   Quiz Page Wireframe Mobile- - [View](https://share.balsamiq.com/c/oF4JQeN934FA3HxmwLitNm.png/)
+
+    -   Resources Page Wireframe Mobile- - [View](https://share.balsamiq.com/c/jgLSht9vcMPW9pYiX8ifCF.png/)
 
 ## Features
 

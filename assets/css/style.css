@@ -22,7 +22,17 @@ body {
     background-color: white;
     transform: rotate(-10deg);
 
-    }
+}
+
+h1,
+h2 {
+    color: red;
+    letter-spacing: 5px;
+}
+
+header {
+    margin: 0px;
+}
 
 /* NAVBAR */
 ol li::marker {
@@ -32,30 +42,33 @@ ol li::marker {
     font-weight: bold;
 }
 
-ul li{
-        list-style-type: none; /*no bullet points anywhere*/
+ul li {
+    list-style-type: none;
+    /*no bullet points anywhere*/
 }
 
- a {
+a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
-.bi-suit-heart-fill, .bi-suit-diamond-fill {
- color: red;
+.bi-suit-heart-fill,
+.bi-suit-diamond-fill {
+    color: red;
 }
 
-.bi-suit-spade-fill, .bi-suit-club-fill {
- color: black;
+.bi-suit-spade-fill,
+.bi-suit-club-fill {
+    color: black;
 }
 
 .navbar {
-color: DarkSlateGray;
-background-color:inherit;
-font-family: 'Alice', serif;
-letter-spacing: 5px;
-float: right;
-text-align: right;
+    color: DarkSlateGray;
+    background-color: inherit;
+    font-family: 'Alice', serif;
+    letter-spacing: 5px;
+    float: right;
+    text-align: right;
 }
 
 .navbar a:hover i {
@@ -68,9 +81,34 @@ text-align: right;
     font-size: 150%;
 }
 
- .active i {
+.active i {
     color: white;
     text-shadow: 2px 2px black;
+}
+
+.column {
+    float: left;
+    min-width: 20%;
+    width: 20%;
+    height: auto;
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+.container {
+    text-align: center;
+    /*width: 800px;*/
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-top: 50px;
 }
 
 /* FOOTER */
@@ -85,22 +123,22 @@ text-align: right;
     background-color: #69061c;
     color: white;
     text-align: center;
- }
+}
 
- .footer a {
-    color: inherit;/*by default links are grey as in the navbar*/
+.footer a {
+    color: inherit;
+    /*by default links are grey as in the navbar*/
 }
 
 /*styles for INDEX page*/
-#intro p
-{
+#intro p {
     text-align: center;
-    justify-content: center;    
+    justify-content: center;
 }
 
 /*styles for RULES page*/
 
-.quizarea{
+.quizarea {
     margin: 0;
     padding: 0;
     display: flex;
@@ -117,21 +155,25 @@ text-align: right;
     box-shadow: 0 0 10px 2px;
 }
 
-#hands img{
-    width: 95%; height: auto;
+#hands img {
+    width: 95%;
+    height: auto;
 }
 
-.rulesarea {/*used in index page also*/
+.rulesarea {
+    /*used in index page also*/
     margin: 0;
     padding: 0;
-    display: flex; /*without this it will not centre the rules container*/
+    display: flex;
+    /*without this it will not centre the rules container*/
     width: 100vw;
     height: auto;
     justify-content: center;
     align-items: center;
-    /*background-color: red;    */ 
 }
-.rules-container {/*used in index page also*/
+
+.rules-container {
+    /*used in index page also*/
     width: 800px;
     max-width: 80%;
     background-color: white;
@@ -143,26 +185,15 @@ text-align: right;
 .rules-container h2 {
     text-align: left;
 }
-/*
-hr {
-    background-color: #cc0000;
-    width: 95%;
-    height: 0.5px;
-    margin-top: 10px;
-    margin-bottom: 30px;
 
+/*styles for RESOURCES page*/
+
+/* for consistency the rules container was reused in the resources page
+     so an id was used to override the text aligmnent*/
+#resources {
+    text-align: center;
 }
 
-.hands {
-    margin-bottom: 30px; 
-    background-color: blueviolet;
-    border: 1px solid red; 
-    padding: 35px;
-       line-height: 3;
-        margin-bottom: 20px;
-margin-bottom: 3px; 
-    
-}*/
 
 /*styles for QUIZ page*/
 
@@ -174,30 +205,31 @@ margin-bottom: 3px;
 
 .btn-grid div {
     display: grid;
-    grid-template-columns:auto;
+    grid-template-columns: auto;
 }
 
 .btn {
     background-color: rgb(196, 174, 121);
     border: 2px solid black;
-    border-radius: 5px ;
+    border-radius: 5px;
     padding: 5px 10px;
-    color: black;
 }
 
+/*
 .btnCard {
     display: inline;
     padding: 1px;
     outline: none;
     max-height: 200px;
     width: auto;
-}
+}*/
 
-.btn:hover{
+.btn:hover {
     border-color: royalblue;
 }
 
-.start-btn, .next-btn {
+.start-btn,
+.next-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
@@ -211,7 +243,7 @@ margin-bottom: 3px;
 }
 
 .hide {
-  display: none;
+    display: none;
 }
 
 .controls {
@@ -220,83 +252,28 @@ margin-bottom: 3px;
     align-items: center;
 }
 
-
-
-/*styles for RESOURCES page*/
-
-/* for consistency the rules container was reused in the resources page
-     so an id was used to override the text aligmnent*/
-#resources {
-    text-align: center;
+Clear floats after image containers .row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
-
-h1, h2 {
-    color: red; 
-    letter-spacing: 5px;
-}
-
-header {
-    margin: 0px;
-}
-
-.column {
-  float: left;
-  min-width: 20%;
-  width: 20%;
-  height:auto;
-  padding-bottom: 30px;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-
-
-.container{
-    text-align: center;
-    /*width: 800px;*/
-    max-width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.row {
-    margin-left: 0px;
-    margin-top: 50px;
-}
-
-
- Clear floats after image containers 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-
-
 
 
 /* change depending on whether answer is correct. */
 
 .btn.correct {
-    background-color: green;
+    background-color: lightseagreen;
 }
 
-.btn.wrong{
+.btn.wrong {
     background-color: red;
-}
-
-.btn.missed{
-    font-style: italic;
-    border: 5px solid green;
 }
 
 
 /* Optional: Makes the sample page fill the window. */
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
