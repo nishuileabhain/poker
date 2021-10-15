@@ -58,7 +58,7 @@ This is a site to help people learn to play poker. It is designed to be responsi
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-   - Bootstrap was used to assist with the responsiveness and styling of the website.
+   - Bootstrap was used to assist with the responsiveness and styling of the navbar.
 1. [Google Fonts:](https://fonts.google.com/)
    - Google fonts were used to import the 'Alice' font into the style.css file which is used on all pages throughout the project.
 1. [Font Awesome:](https://fontawesome.com/)
@@ -81,7 +81,12 @@ This is a site to help people learn to play poker. It is designed to be responsi
    - Used throughout development for troubleshooting and debugging 
 1. [JS Fiddle:](https://jsfiddle.net)
    - Used to test combinations of css classes and javascript.
+1. [JS Hint:](https://jshint.com/)
+   - Used to validate javascript code.
 
+
+
+ 
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
@@ -92,58 +97,34 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 ### Testing User Stories from User Experience (UX) Section
 
 -   #### First Time Visitor Goals
+1. As a First Time Visitor, I want to easily understand the main purpose of the site.
+    1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation sidebar to go to the page of their choice. The index page gives a synopsis of the site’s features.
+    1. A header title shows exactly which page the user is currently on
+    1. The user has two options, click the links in the main page content or use the navigation bars.
+1. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
+    1. The site has been designed to be fluid and never to entrap the user. At the right of each page there is a clean navigation bar, clearly showing which page they are on.
+1. As a First Time Visitor, I want to easily understand the poker rules from the shown examples
+    1. The new user can read the poker rules and can see clear examples of each hand.
+    1. Once the new visitor has read the rules, they will notice the quiz section.
+    1. The final link in the navigation bar allows the user to explore more advanced concepts and practice playing online.
+1. As a First Time Visitor, I want to easily understand the feedback given in the quiz
+    1. Once the new visitor has started the quiz they are presented with a multiple choice
+    1. The button clicked will enlarge and turn red or green depending on the answer and an image with a header appears to tell them if they are right or wrong.
+    1. The correct answer is highlighted in green so the user will know for next time.
+    1. At the end of the quiz a total score is displayed.
 
-    1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
+    -   #### Returning Visitor Goals
 
-        1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Hero Image with Text and a "Learn More" Call to action button.
-        2. The main points are made immediately with the hero image
-        3. The user has two options, click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the organisation.
+1. As a Returning Visitor, I want to quickly find the rules to refresh my knowledge
+    1. The navigation bar clearly highlights the "Rules" Page and it is linked to from the index and quiz page also.
+1. As a Returning Visitor, I want to quickly find the quiz to test my knowledge
+    1. The navigation bar clearly highlights the "Quiz" Page and it is linked to from the index page also.
+1. As a Returning Visitor, I want to find the best way to get in contact with the website owner.
+    1. The footer of each page contains links to github and an email address in case of this.
+1. As a Returning Visitor, I want to find useful external links.
+    1. After a few attempts at the quiz and becoming familiar with the rules, the resources page can be easily found from the navbar and the index page.
 
-    2. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
 
-        1. The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link describes what the page they will end up at clearly.
-        2. At the bottom of the first 3 pages there is a redirection call to action to ensure the user always has somewhere to go and doesn't feel trapped as they get to the bottom of the page.
-        3. On the Contact Us Page, after a form response is submitted, the page refreshes and the user is brought to the top of the page where the navigation bar is.
-
-    3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their following on social media to determine how trusted and known they are.
-        1. Once the new visitor has read the About Us and What We Do text, they will notice the Why We are Loved So Much section.
-        2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
-        3. At the bottom of the Contact Us page, the user is told underneath the form, that alternatively they can contact the organisation on social media which highlights the links to them.
-
--   #### Returning Visitor Goals
-
-    1. As a Returning Visitor, I want to find the new programming challenges or hackathons.
-
-        1. These are clearly shown in the banner message.
-        2. They will be directed to a page with another hero image and call to action.
-
-    2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-
-        1. The navigation bar clearly highlights the "Contact Us" Page.
-        2. Here they can fill out the form on the page or are told that alternatively they can message the organisation on social media.
-        3. The footer contains links to the organisations Facebook, Twitter and Instagram page as well as the organization's email.
-        4. Whichever link they click, it will be open up in a new tab to ensure the user can easily get back to the website.
-        5. The email button is set up to automatically open up your email app and autofill there email address in the "To" section.
-
-    3. As a Returning Visitor, I want to find the Facebook Group link so that I can join and interact with others in the community.
-        1. The Facebook Page can be found at the footer of every page and will open a new tab for the user and more information can be found on the Facebook page.
-        2. Alternatively, the user can scroll to the bottom of the Home page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
-        3. If the user is on the "Our Favourites" page they will also be greeted with a call to action button to invite the user to the Facebook group. The user is incentivized as they are told there is a weekly favourite product posted in the group.
-
--   #### Frequent User Goals
-
-    1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-
-        1. The user would already be comfortable with the website layout and can easily click the banner message.
-
-    2. As a Frequent User, I want to check to see if there are any new blog posts.
-
-        1. The user would already be comfortable with the website layout and can easily click the blog link
-
-    3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-        1. At the bottom of every page their is a footer which content is consistent throughout all pages.
-        2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
-        3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
 
 ### Further Testing
 
@@ -210,21 +191,24 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
--   The full-screen hero image code came from this [StackOverflow post](https://stackoverflow.com)
+1. [Web Dev Simplified:](https://github.com/WebDevSimplified/)
+   - The javascript quiz was based on the quiz tutorial and several other videos from this channel were referenced. The javascript quiz tutorial is [Here](https://www.youtube.com/watch?v=riDzcEQbX6k)
 
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
--   [MDN Web Docs](https://developer.mozilla.org/) : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found [Here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel#Pattern_validation)
+-   [W3 Schools](https://www.w3schools.com/css/) : code for the box shadow and footer as referenced in style.css were taken from W3 Schools
 
 ### Content
 
 -   All content was written by the developer.
 
--   Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
 
 ### Media
 
--   All Images were created by the developer.
+-   All images were taken from www.alice-in-wonderland.net [here](https://www.alice-in-wonderland.net/resources/pictures/alices-adventures-in-wonderland//psychological-properties-of-colours)
+-   except for the playing card image files which were free graphics from pixbay [here](https://pixabay.com/ )
+
+
 
 ### Acknowledgements
 
