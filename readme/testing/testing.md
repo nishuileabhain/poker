@@ -35,12 +35,12 @@
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-* [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](### Markup Validation Service)
-* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](### CSS-validator)
-* [Wave](https://wave.webaim.org/) - [Results](### Wave Web Accessibility Evaluation Tool)
-* [Chrome developer tools:](https://developers.google.com/web/tools/chrome-devtools) is used throughout development for troubleshooting and debugging  - [Results](### Google Devtools)
-* [JS Hint:](https://jshint.com/) - Used to validate javascript code.  - [Results](### JSHINT)
-* [Lighthouse:](https://developers.google.com/web/tools/lighthouse) is used to validate performance.  - [Results]( )
+* [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](#Markup-Validation-Service)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](#CSS-validator)
+* [Wave](https://wave.webaim.org/) - [Results](#Wave-Web-Accessibility-Evaluation-Tool)
+* [Chrome developer tools:](https://developers.google.com/web/tools/chrome-devtools) is used throughout development for troubleshooting and debugging  - [Results](#Google-Devtools)
+* [JS Hint](https://jshint.com/) is used to validate javascript code.  - [Results](#JSHINT)
+* [Lighthouse](https://developers.google.com/web/tools/lighthouse) is used to validate performance.  - [Results](#Lighthouse)
 
 ### CSS validator
 
