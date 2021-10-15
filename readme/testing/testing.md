@@ -4,7 +4,7 @@
 
 ### Testing User Stories from User Experience (UX) Section
 
--   #### First Time Visitor Goals
+#### First Time Visitor Goals
 1. As a First Time Visitor, I want to easily understand the main purpose of the site.
     1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation sidebar to go to the page of their choice. The index page gives a synopsis of the site’s features.
     1. A header title shows exactly which page the user is currently on
@@ -21,8 +21,7 @@
     1. The correct answer is highlighted in green so the user will know for next time.
     1. At the end of the quiz a total score is displayed.
 
-    -   #### Returning Visitor Goals
-
+#### Returning Visitor Goals
 1. As a Returning Visitor, I want to quickly find the rules to refresh my knowledge
     1. The navigation bar clearly highlights the "Rules" Page and it is linked to from the index and quiz page also.
 1. As a Returning Visitor, I want to quickly find the quiz to test my knowledge
@@ -36,13 +35,12 @@
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [Wave](https://wave.webaim.org/) - [Results](https://github.com/)
--   [Chrome developer tools:](https://developers.google.com/web/tools/chrome-devtools)
-   - Used throughout development for troubleshooting and debugging 
--   [JS Hint:](https://jshint.com/)
-   - Used to validate javascript code.
+* [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](### Markup Validation Service)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](### CSS-validator)
+* [Wave](https://wave.webaim.org/) - [Results](### Wave Web Accessibility Evaluation Tool)
+* [Chrome developer tools:](https://developers.google.com/web/tools/chrome-devtools) is used throughout development for troubleshooting and debugging  - [Results](### Google Devtools)
+* [JS Hint:](https://jshint.com/) - Used to validate javascript code.  - [Results](### JSHINT)
+* [Lighthouse:](https://developers.google.com/web/tools/lighthouse) is used to validate performance.  - [Results]( )
 
 ### CSS validator
 
