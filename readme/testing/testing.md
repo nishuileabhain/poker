@@ -37,7 +37,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 * [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](#Markup-Validation-Service)
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](#CSS-validator)
-* [Wave](https://wave.webaim.org/) - [Results](#Wave-Web-Accessibility-Evaluation-Tool)
+* [Wave](https://wave.webaim.org/) is used to validate accessability - [Results](#Wave-Web-Accessibility-Evaluation-Tool)
 * [Chrome developer tools:](https://developers.google.com/web/tools/chrome-devtools) is used throughout development for troubleshooting and debugging  - [Results](#Google-Devtools)
 * [JS Hint](https://jshint.com/) is used to validate javascript code.  - [Results](#JSHINT)
 * [Lighthouse](https://developers.google.com/web/tools/lighthouse) is used to validate performance.  - [Results](#Lighthouse)
@@ -52,14 +52,14 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Google Devtools
 
-![Uncaught Type Error](/workspace/poker/readme/testing/uncaughttyperesources.png)
+![Uncaught Type Error](/readme/testing/uncaughttyperesources.png)
 * On resources.html no issue was apparent from usage but an error said
 ```script.js:15 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
     at script.js:15
 ```
 However javascript is not used on that page at all so the link to the script was removed from the html
 
-![Uncaught Type Error](/workspace/poker/readme/testing/uncaughttypequiz.png)
+![Uncaught Type Error](/readme/testing/uncaughttypequiz.png)
 * On QuizGame.html The “Uncaught TypeError: cannot set property 'innerHTML' of null” error was resolved by moving the script link out of the header to the bottom of the html page 
 
 ![Uncaught Type Error](/readme/testing/manifestsyntaxerror.png)
