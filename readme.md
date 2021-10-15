@@ -36,21 +36,21 @@ This is a site to help people learn to play poker. It is designed to be responsi
 
 *   ### Wireframes
 
-    -   Home Page Wireframe - [View](https://share.balsamiq.com/c/pA9j4CoRpZvkjvTnCo7e2g.png/)
+    -   Home Page Wireframe - [View](/readme/wireframes/indexDT.png/)
 
-    -   Rules Page Wireframe - [View](https://share.balsamiq.com/c/aWpxE7iksgojL1BfSV4iD9.png/)
+    -   Rules Page Wireframe - [View](/readme/wireframes/rulesDT.png/)
 
-    -   Quiz Page Wireframe - [View](https://share.balsamiq.com/c/YFQpcuCKqYHLUSaosWB4u.png/)
+    -   Quiz Page Wireframe - [View](/readme/wireframes/quizDT.png/)
 
-    -   Resources Page Wireframe - [View](https://share.balsamiq.com/c/jKbsu2veRaWUMBRGtoFMPz.png/)
+    -   Resources Page Wireframe - [View](/readme/wireframes/resourcesDT.png/)
 
-    -   Home Page Wireframe Mobile- - [View](https://share.balsamiq.com/c/6eU3WDDXkJWYg7oRCSzVy9.png/)
+    -   Home Page Wireframe Mobile- - [View](/readme/wireframes/indexMOB.png/)
 
-    -   Rules Page Wireframe Mobile- - [View](https://share.balsamiq.com/c/dU5tno3YntfVdc2Erm8Z9.png/)
+    -   Rules Page Wireframe Mobile- - [View](/readme/wireframes/rulesMOB.png/)
 
-    -   Quiz Page Wireframe Mobile- - [View](https://share.balsamiq.com/c/oF4JQeN934FA3HxmwLitNm.png/)
+    -   Quiz Page Wireframe Mobile- - [View](/readme/wireframes/quizMOB.png/)
 
-    -   Resources Page Wireframe Mobile- - [View](https://share.balsamiq.com/c/jgLSht9vcMPW9pYiX8ifCF.png/)
+    -   Resources Page Wireframe Mobile- - [View](/readme/wireframes/indexMOB.png/)
 
 ## Features
 
