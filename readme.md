@@ -38,7 +38,7 @@ This is a site to help people learn to play poker. It is designed to be responsi
 
     -   Home Page Wireframe - [View](https://share.balsamiq.com/c/pA9j4CoRpZvkjvTnCo7e2g.png/)
 
-    -   Rules Page Wireframe - [View](https://share.balsamiq.com/c/jKbsu2veRaWUMBRGtoFMPz.png/)
+    -   Rules Page Wireframe - [View](https://share.balsamiq.com/c/aWpxE7iksgojL1BfSV4iD9.png/)
 
     -   Quiz Page Wireframe - [View](https://share.balsamiq.com/c/YFQpcuCKqYHLUSaosWB4u.png/)
 
@@ -139,16 +139,15 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Further Testing
 
--   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
+-   The Website was tested on Google Chrome and Microsoft Edge browsers.
+-   The website was viewed on a variety of devices such as Chromebook, Laptop, & OnePlus.
 -   A large amount of testing was done to ensure that all pages were linking correctly.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
 ### Known Bugs
 
--   On some mobile devices the Hero Image pushes the size of screen out more than any of the other content on the page.
-    -   A white gap can be seen to the right of the footer and navigation bar as a result.
--   On Microsoft Edge and Internet Explorer Browsers, all links in Navbar are pushed upwards when hovering over them.
+-   When deployed to github pages the favicon no longer works
+-   Users could increment their score if they kept clicking the buttons after the inital scoring and feedback.
 
 ## Deployment
 
@@ -205,7 +204,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 1. [Web Dev Simplified:](https://github.com/WebDevSimplified/)
    - The javascript quiz was based on the quiz tutorial and several other videos from this channel were referenced. The javascript quiz tutorial is [Here](https://www.youtube.com/watch?v=riDzcEQbX6k)
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+-   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): The side Navbar is built using bootstrap code.
 
 -   [W3 Schools](https://www.w3schools.com/css/) : code for the box shadow and footer as referenced in style.css were taken from W3 Schools
 
