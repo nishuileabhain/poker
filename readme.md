@@ -102,40 +102,7 @@ This is a site to help people learn to play poker. It is designed to be responsi
 
 The testing information and results for this project are documented in [testing.md](readme/testing/testing.md)
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
-
-### Testing User Stories from User Experience (UX) Section
-
--   #### First Time Visitor Goals
-1. As a First Time Visitor, I want to easily understand the main purpose of the site.
-    1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation sidebar to go to the page of their choice. The index page gives a synopsis of the site’s features.
-    1. A header title shows exactly which page the user is currently on
-    1. The user has two options, click the links in the main page content or use the navigation bars.
-1. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
-    1. The site has been designed to be fluid and never to entrap the user. At the right of each page there is a clean navigation bar, clearly showing which page they are on.
-1. As a First Time Visitor, I want to easily understand the poker rules from the shown examples
-    1. The new user can read the poker rules and can see clear examples of each hand.
-    1. Once the new visitor has read the rules, they will notice the quiz section.
-    1. The final link in the navigation bar allows the user to explore more advanced concepts and practice playing online.
-1. As a First Time Visitor, I want to easily understand the feedback given in the quiz
-    1. Once the new visitor has started the quiz they are presented with a multiple choice
-    1. The button clicked will enlarge and turn red or green depending on the answer and an image with a header appears to tell them if they are right or wrong.
-    1. The correct answer is highlighted in green so the user will know for next time.
-    1. At the end of the quiz a total score is displayed.
-
-    -   #### Returning Visitor Goals
-
-1. As a Returning Visitor, I want to quickly find the rules to refresh my knowledge
-    1. The navigation bar clearly highlights the "Rules" Page and it is linked to from the index and quiz page also.
-1. As a Returning Visitor, I want to quickly find the quiz to test my knowledge
-    1. The navigation bar clearly highlights the "Quiz" Page and it is linked to from the index page also.
-1. As a Returning Visitor, I want to find the best way to get in contact with the website owner.
-    1. The footer of each page contains links to github and an email address in case of this.
-1. As a Returning Visitor, I want to find useful external links.
-    1. After a few attempts at the quiz and becoming familiar with the rules, the resources page can be easily found from the navbar and the index page.
 
 
 
@@ -210,9 +177,13 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   [W3 Schools](https://www.w3schools.com/css/) : code for the box shadow and footer as referenced in style.css were taken from W3 Schools
 
+-   [Favicon Generator](https://favicon.io/favicon-generator/) : Icon was made from the letter P written in the ‘Alice’ font, created by Ksenia Erulevich and available freely on google fonts.
+
 ### Content
 
 -   All content was written by the developer.
+-   This readme file was adapted from a code institute template.
+
 
 
 ### Media
